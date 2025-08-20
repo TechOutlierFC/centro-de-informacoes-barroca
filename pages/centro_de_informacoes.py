@@ -20,7 +20,7 @@ def get_logo_html(filename, class_name="logo-img", link="#"):
     encoded_logo = get_image_as_base64(logo_path)
     if encoded_logo:
         target = "_self" if link.startswith("?") else "_blank"
-        return f'<a href="{link}" target="{target}"><img class="{class_name}" src="data:image/{ext};base64,{encoded_logo}" alt="{filename}"></a>'
+        return f'<a href="{link}" target="{target}" rel="noopener noreferrer"><img class="{class_name}" src="data:image/{ext};base64,{encoded_logo}" alt="{filename}"></a>'
     return ""
 
 if 'show_logos' not in st.session_state:
@@ -133,7 +133,7 @@ def team_modal(config):
     )
 
     options_html = "".join([
-        f'<a class="modal-btn" role="button" href="{opt["link"]}" target="_blank">{opt["icon"]}<span class="modal-btn-text">{opt["label"]}</span></a>'
+        f'<a class="modal-btn" role="button" href="{opt["link"]}" target="_blank" rel="noopener noreferrer">{opt["icon"]}<span class="modal-btn-text">{opt["label"]}</span></a>'
         for opt in config["options"]
     ])
 
@@ -167,7 +167,7 @@ def toggle_logos():
 def hide_logos():
     st.session_state.show_logos = False
 
-st.markdown('<a href="/" target="_self" class="back-button" title="Voltar à página inicial"> &#x21A9; </a>', unsafe_allow_html=True)
+st.markdown('<a href="/" target="_top" class="back-button" title="Voltar à página inicial"> &#x21A9; </a>', unsafe_allow_html=True)
 
 YELLOW = "#FFA500"
 
@@ -644,7 +644,7 @@ with content_col:
                     )
                 elif folder in folder_links:
                     st.markdown(
-                        f'<a class="folder-btn" role="button" href="{folder_links[folder]}" target="_blank">{icon} {folder}</a>',
+                        f'<a class="folder-btn" role="button" href="{folder_links[folder]}" target="_blank" rel="noopener noreferrer">{icon} {folder}</a>',
                         unsafe_allow_html=True,
                     )
                 else:
