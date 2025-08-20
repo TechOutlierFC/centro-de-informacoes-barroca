@@ -76,6 +76,10 @@ with col_central:
             <div class='custom-box'>Apresentação</div>
         </a>
     """, unsafe_allow_html=True)
-    st.markdown("<div class='custom-box'>Centro de Informações</div>", unsafe_allow_html=True)
+    st.markdown("""
+        <a href='/centro_de_informacoes' target='_self' style='text-decoration: none;'>
+            <div class='custom-box'>Centro de Informações</div>
+        </a>
+    """, unsafe_allow_html=True)
     st.markdown("<div class='custom-box'>Em Breve</div>", unsafe_allow_html=True)
 
