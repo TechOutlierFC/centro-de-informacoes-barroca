@@ -25,6 +25,8 @@ def get_logo_html(filename, class_name="logo-img"):
 
 st.set_page_config(page_title="Apresentação Barroca", page_icon="🏆", layout="wide")
 
+st.markdown('<a href="/" target="_self" class="back-button" title="Voltar à página inicial"> &#x21A9; </a>', unsafe_allow_html=True)
+
 YELLOW = "#FFA500"
 
 IMAGE_PATH = "public/barroca.webp"
@@ -288,6 +290,30 @@ st.markdown(
       /* Divisórias verticais amarelas com altura exata da área visível */
       .barroca-col:not(:last-child) {{
         border-right: var(--line-w) solid var(--line-color);
+      }}
+
+      .back-button {{
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999;
+        background-color: white;
+        border: 2px solid var(--line-color);
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: black !important;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        transition: all 0.2s ease-in-out;
+      }}
+      .back-button:hover {{
+        transform: scale(1.1);
+        background-color: #f8f8f8;
       }}
     </style>
     """,
