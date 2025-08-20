@@ -35,6 +35,19 @@ try:
     if "modal" in query_params:
         st.session_state.modal_team = query_params["modal"]
         query_params.clear()
+    # Navegação robusta para "voltar" (evita depender de "/" no Streamlit Cloud)
+    elif "go" in query_params and query_params["go"] == "home":
+        # Limpa os parâmetros para evitar loops e tenta trocar de página
+        query_params.clear()
+        try:
+            st.switch_page("app.py")
+        except Exception:
+            # Fallback seguro para recarregar a raiz relativa
+            st.markdown("""
+            <script>
+            try { window.location.href = './'; } catch (e) {}
+            </script>
+            """, unsafe_allow_html=True)
 except AttributeError:
     pass
 
@@ -167,7 +180,7 @@ def toggle_logos():
 def hide_logos():
     st.session_state.show_logos = False
 
-st.markdown('<a href="/" target="_self" class="back-button" title="Voltar à página inicial"> &#x21A9; </a>', unsafe_allow_html=True)
+st.markdown('<a href="?go=home" target="_self" class="back-button" title="Voltar à página inicial"> &#x21A9; </a>', unsafe_allow_html=True)
 
 YELLOW = "#FFA500"
 
