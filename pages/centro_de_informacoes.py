@@ -204,7 +204,8 @@ folder_links = {
     "Referências Externas": "https://drive.google.com/drive/u/1/folders/1MzFZ5sJv3Ox1Q9Foa0Q4fWEPiYymYv-D",
     "Mercado e Banco de Dados": "https://drive.google.com/drive/u/1/folders/1er6TRhp4N4gB7nbo-XpxOv_2fadDpf2w",
     "Clubes Alvo": "https://drive.google.com/drive/u/1/folders/19HOmXsn-ewfPaD5TBipojWCXu8c8a3_k",
-    "Referências OutlierFC": "https://drive.google.com/drive/u/1/folders/1G8EpSiV9yNHZlqV0v6PWtx2aXHOMhI83"
+    "Referências OutlierFC": "https://drive.google.com/drive/u/1/folders/1G8EpSiV9yNHZlqV0v6PWtx2aXHOMhI83",
+    "Modelo de Trabalho": "/modelo_de_trabalho",
 }
 
 model_logos_files = [
@@ -273,7 +274,7 @@ logo_sets = {
     "Adversários": ["crb.png", "avai.png"],
     "Treinos / Jogos e Compactos": training_logos_files,
     "Modelo de Trabalho": work_model_logos_files,
-    "Preleções": ["mirassol.png", "crb.png", "avai.png", "drive.png"],
+    "Preleções": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp", "drive.png"],
     "Feedbacks": ["mirassol.png", "crb.png", "avai.png"],
     "Bastidores": ["crb.png"]
 }
@@ -297,6 +298,7 @@ logo_link_overrides = {
         "mirassol.png": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHive6C_Mnty82kxH-z5ICy8",
         "crb.png": "https://drive.google.com/drive/folders/1Z8otxolgB7sZicz_c2owOHiKw9936ANS",
         "avai.png": "?modal=avai_prelecoes",
+        "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1_3mQW0w1eEPUEEsJXhKfeSG2iFXiHHCp",
         "drive.png": "https://drive.google.com/drive/u/1/folders/1xG8Bbm2EypoWLFEee7u_vda9F22iQzGg"
     },
     "Feedbacks": {
@@ -928,7 +930,7 @@ with content_col:
             col = cols[i * 2]
             with col:
                 icon = folder_icons.get(folder, "📁")
-                if folder in ["Modelo de Jogo", "Adversários", "Treinos / Jogos e Compactos", "Preleções", "Feedbacks", "Bastidores", "Modelo de Trabalho"]:
+                if folder in ["Modelo de Jogo", "Adversários", "Treinos / Jogos e Compactos", "Preleções", "Feedbacks", "Bastidores"]:
                     is_active = (st.session_state.active_logo_section == folder and st.session_state.show_logos)
                     st.button(
                         label=f'{icon} {folder}',
@@ -939,10 +941,16 @@ with content_col:
                     if is_active:
                         st.markdown('<div class="desktop-only active-folder-underline"></div>', unsafe_allow_html=True)
                 elif folder in folder_links:
-                    st.markdown(
-                        f'<a class="folder-btn" role="button" href="{folder_links[folder]}" target="_blank">{icon} {folder}</a>',
-                        unsafe_allow_html=True,
-                    )
+                    if folder == "Modelo de Trabalho":
+                        st.markdown(
+                            f'<a class="folder-btn" role="button" href="{folder_links[folder]}" target="_self">{icon} {folder}</a>',
+                            unsafe_allow_html=True,
+                        )
+                    else:
+                        st.markdown(
+                            f'<a class="folder-btn" role="button" href="{folder_links[folder]}" target="_blank">{icon} {folder}</a>',
+                            unsafe_allow_html=True,
+                        )
                 else:
                     st.button(
                         label=f'{icon} {folder}',

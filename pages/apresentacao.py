@@ -98,6 +98,7 @@ conquistas = [
 st.markdown(
     f"""
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
       /* Travar qualquer rolagem e zerar paddings que causam overflow */
       html, body, .stApp, [data-testid="stAppViewContainer"],
       section.main, .main, .block-container {{
@@ -159,6 +160,7 @@ st.markdown(
       }}
 
       .titulo-principal {{
+        font-family: 'Anton', sans-serif;
         font-size: clamp(1.5rem, 6vmin, 3.2rem);
         font-weight: bold;
       }}
