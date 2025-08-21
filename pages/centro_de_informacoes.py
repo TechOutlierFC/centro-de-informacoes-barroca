@@ -505,10 +505,10 @@ st.markdown(
       /* Linha de logos no desktop: ocupar toda a largura do container e não quebrar linha */
       .desktop-row-logos {{
         width: 100%;
-        flex-wrap: nowrap !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
-        overflow-x: auto;
-        padding: 0 !important; /* sem padding extra */
+        overflow: visible !important;
+        padding: 0 24px !important; /* folga lateral para evitar scroll ao hover */
       }}
       /* Espaçamento entre botões (mesma linha e entre linhas) */
       [data-testid="column"] {{
