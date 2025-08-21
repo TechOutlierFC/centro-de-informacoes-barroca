@@ -54,6 +54,8 @@ logos_treinador = [
     get_logo_html("bahia.png"),
     get_logo_html("ceara.png"),
     get_logo_html("avai.png"),
+    get_logo_html("mirassol.png"),
+    get_logo_html("crb.png"),
 ]
 logos_treinador_p1 = logos_treinador[:4]
 logos_treinador_p2 = logos_treinador[4:]
@@ -233,8 +235,9 @@ st.markdown(
       }}
 
       .logo-img {{
-        height: clamp(65px, 12vh, 140px);
-        width: auto;
+        height: clamp(56px, 10vh, 110px);
+        width: clamp(56px, 10vh, 110px);
+        object-fit: contain;
       }}
 
       .col-conquistas {{
@@ -262,7 +265,8 @@ st.markdown(
 
       .conquista-logo {{
         height: clamp(50px, 8vh, 105px);
-        width: auto;
+        width: clamp(50px, 8vh, 105px);
+        object-fit: contain;
         justify-self: center;
       }}
 
@@ -279,10 +283,10 @@ st.markdown(
         .formacao-ano {{ font-size: 1.6rem; }}
         .formacao-desc {{ font-size: 0.9rem; }}
 
-        .logo-img {{ height: 90px; }}
+        .logo-img {{ height: 90px; width: 90px; }}
 
         .conquista-item .formacao-ano {{ font-size: 1.8rem; }}
-        .conquista-logo {{ height: 65px; }}
+        .conquista-logo {{ height: 65px; width: 65px; }}
         .conquista-desc {{ font-size: 1.2rem; }}
         .conquista-item {{ grid-template-columns: 0.7fr 0.7fr 1.6fr; }}
       }}
@@ -366,6 +370,13 @@ st.markdown(
 
         .logo-img {{
           height: clamp(40px, 9vh, 70px);
+          width: clamp(40px, 9vh, 70px);
+        }}
+
+        .logos-row {{
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          justify-items: center;
         }}
 
         .conquista-item {{
@@ -375,6 +386,7 @@ st.markdown(
 
         .conquista-logo {{
           height: clamp(38px, 7vh, 60px);
+          width: clamp(38px, 7vh, 60px);
         }}
 
         .conquista-desc {{
