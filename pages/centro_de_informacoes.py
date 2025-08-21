@@ -275,7 +275,7 @@ logo_sets = {
     "Treinos / Jogos e Compactos": training_logos_files,
     "Modelo de Trabalho": work_model_logos_files,
     "Preleções": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp", "drive.png"],
-    "Feedbacks": ["mirassol.png", "crb.png", "avai.png"],
+    "Feedbacks": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp"],
     "Bastidores": ["crb.png"]
 }
 
@@ -304,7 +304,8 @@ logo_link_overrides = {
     "Feedbacks": {
         "mirassol.png": "?modal=mirassol_feedbacks",
         "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqmM-UjXstIKW_mf9OXSMSG",
-        "avai.png": "?modal=avai_feedbacks"
+        "avai.png": "?modal=avai_feedbacks",
+        "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1yHIKCWD8IhaRTc8An_EI7xOv5Zm5jtkr"
     },
     "Bastidores": {
         "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ"
