@@ -201,11 +201,10 @@ folder_icons = {
 folders = sorted(folder_icons.keys())
 
 folder_links = {
-    "Referências Externas": "https://drive.google.com/drive/u/1/folders/1GjfWOd35YuA1FhpzXPUFG8a41ByANlhc",
+    "Referências Externas": "https://drive.google.com/drive/u/1/folders/1MzFZ5sJv3Ox1Q9Foa0Q4fWEPiYymYv-D",
     "Mercado e Banco de Dados": "https://drive.google.com/drive/u/1/folders/1er6TRhp4N4gB7nbo-XpxOv_2fadDpf2w",
     "Clubes Alvo": "https://drive.google.com/drive/u/1/folders/19HOmXsn-ewfPaD5TBipojWCXu8c8a3_k",
-    "Referências OutlierFC": "https://drive.google.com/drive/u/1/folders/1G8EpSiV9yNHZlqV0v6PWtx2aXHOMhI83",
-    "Modelo de Trabalho": "https://drive.google.com/drive/u/1/folders/1xuPsdW1XaCCiuPstdOxcMHYoTpsYBOFg"
+    "Referências OutlierFC": "https://drive.google.com/drive/u/1/folders/1G8EpSiV9yNHZlqV0v6PWtx2aXHOMhI83"
 }
 
 model_logos_files = [
@@ -215,6 +214,35 @@ model_logos_files = [
 training_logos_files = [
     "mirassol.png", "avai.png", "vitoria.png", "coritiba.webp",
     "botafogo.png", "corinthians.png", "brasil.png", "crb.png"
+]
+work_model_logos_files = [
+    "ajax.png",
+    "bilbao.png",
+    "atletico_madrid.png",
+    "leverkusen.png",
+    "dortmund.png",
+    "monchengladbach.png",
+    "chelsea.png",
+    "brugge.png",
+    "crystal_palace.png",
+    "everton.png",
+    "barcelona.png",
+    "bayern.png",
+    "schalke.png",
+    "mainz.png",
+    "hibernian.png",
+    "inter.png",
+    "liverpool.png",
+    "mallorca.png",
+    "city.png",
+    "napoli.png",
+    "psg.png",
+    "leipzig.png",
+    "stuttgart.png",
+    "villarreal.png",
+    "wolfsburg.png",
+    "cone.png",
+    "check.png",
 ]
 model_logo_links = {
     "mirassol.png": "https://drive.google.com/file/d/1sAG41hCMiKccfndB08jQ8r6r0ubZAEIT/view",
@@ -244,6 +272,7 @@ logo_sets = {
     "Modelo de Jogo": model_logos_files,
     "Adversários": ["crb.png", "avai.png"],
     "Treinos / Jogos e Compactos": training_logos_files,
+    "Modelo de Trabalho": work_model_logos_files,
     "Preleções": ["mirassol.png", "crb.png", "avai.png", "drive.png"],
     "Feedbacks": ["mirassol.png", "crb.png", "avai.png"],
     "Bastidores": ["crb.png"]
@@ -277,6 +306,35 @@ logo_link_overrides = {
     },
     "Bastidores": {
         "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ"
+    },
+    "Modelo de Trabalho": {
+        "ajax.png": "https://drive.google.com/drive/u/1/folders/1oD6D3bXOjuJ9l6Ub1-xTKtCP2yDhwlXu",
+        "bilbao.png": "https://drive.google.com/drive/u/1/folders/1B_TsMNUG7R4oIfjwquMbiVCCQEmPdtUJ",
+        "atletico_madrid.png": "https://drive.google.com/drive/u/1/folders/1YqfxUpfsG9cj-bKK61wrLBq4POOLTQa3",
+        "leverkusen.png": "https://drive.google.com/drive/u/1/folders/1s2L4-wc3RlRZEBoWbkSrRQDHqnZjuUlc",
+        "dortmund.png": "https://drive.google.com/drive/u/1/folders/1z-ApLoWgZ2YEKYcR8wLNIM9C8ysG5Qys",
+        "monchengladbach.png": "https://drive.google.com/drive/u/1/folders/1j3KDH_5HJAtdTvUgWQDGCINtylQD01Zd",
+        "chelsea.png": "https://drive.google.com/drive/u/1/folders/14xrFUZIgsXfPM0OuzLTdw3rDxrOOWRwN",
+        "brugge.png": "https://drive.google.com/drive/u/1/folders/1d7Tl8wZUUHJcHmFtfrtcB51TLo_A_fN3",
+        "crystal_palace.png": "https://drive.google.com/drive/u/1/folders/1rIeecrBHq-Gwhd3RqV5cCAccaB7WEI3w",
+        "everton.png": "https://drive.google.com/drive/u/1/folders/15q38rIw5ZaG1629GoVMfR7PtXA4-yHTf",
+        "barcelona.png": "https://drive.google.com/drive/u/1/folders/1vKw088JhgDQpOsBPcwwwnNXV6TnS1A_7",
+        "bayern.png": "https://drive.google.com/drive/u/1/folders/1BRYpF3uLrQdyY9fAlnAXkuGLxIziqfOo",
+        "schalke.png": "https://drive.google.com/drive/u/1/folders/1hQsJmx2yBVKfKKR9DtmwSA35Qh6rjd4t",
+        "mainz.png": "https://drive.google.com/drive/u/1/folders/1ie_bQ8Atr-cjOCDi3khoVU5ZzKi9PigU",
+        "hibernian.png": "https://drive.google.com/drive/u/1/folders/1FNqRUklzi3YV8xAtRaxbd6M0e_Esc-Dt",
+        "inter.png": "https://drive.google.com/drive/u/1/folders/1eWqQ6or_3RAzaYtjrXxmPM3atyUY8UyQ",
+        "liverpool.png": "https://drive.google.com/drive/u/1/folders/18-1zg-DaWqWjTGsclcqk7XvStl-l5_jD",
+        "mallorca.png": "https://drive.google.com/drive/u/1/folders/1_yWWVwNzRikp5xC0hElPJdqm1Ob21-4L",
+        "city.png": "https://drive.google.com/drive/u/1/folders/1db5Q6SLyhjMqBBy1B_5p5PVHOnkcQB40",
+        "napoli.png": "https://drive.google.com/drive/u/1/folders/1yZqkzkrll-jbRdBaWPrM19Ctupr0I6Tx",
+        "psg.png": "https://drive.google.com/drive/u/1/folders/1LmOv7srn2h-E_37zFLF45w_6D6peJKqX",
+        "leipzig.png": "https://drive.google.com/drive/u/1/folders/1EaXMf8NL8neRNECQV9YjHVV67FUxwl0j",
+        "stuttgart.png": "https://drive.google.com/drive/u/1/folders/1QUGlh47uM-6VwbvXOpPvDHjadhYfrKta",
+        "villarreal.png": "https://drive.google.com/drive/u/1/folders/10U-YB78Bqsny7cQ8iMFeb76ff41UzIh-",
+        "wolfsburg.png": "https://drive.google.com/drive/u/1/folders/1RznACZfDV30ew-4cLQsQnMDCxOK0ck7V",
+        "cone.png": "https://drive.google.com/drive/u/1/folders/1dPULBvah1pSCTufASiBEQfGKbPO_Gzke",
+        "check.png": "https://drive.google.com/drive/u/1/folders/1rA8IBOzfegLLJRtl_9GgFh0tSjzxCOB3"
     }
 }
 
@@ -297,7 +355,8 @@ st.markdown(
       section.main, .main, .block-container {{
         height: 100dvh !important;
         max-height: 100dvh !important;
-        overflow: hidden !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
         padding: 0 !important;
         margin: 0 !important;
       }}
@@ -483,6 +542,7 @@ st.markdown(
       .logo-item {{
         height: 85px;
         width: auto;
+        max-width: 100%;
         transition: transform 0.2s ease-in-out;
       }}
       .logo-item:hover {{
@@ -502,11 +562,14 @@ st.markdown(
         width: 100%;
       }}
       .active-folder-underline {{ display: none; }}
-      /* Linha de logos no desktop: ocupar toda a largura do container e não quebrar linha */
+      /* Linha de logos no desktop: limitar a 10 por linha e centralizar */
       .desktop-row-logos {{
         width: 100%;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
+        display: grid !important;
+        grid-template-columns: repeat(10, minmax(0, 1fr));
+        justify-items: center;
+        align-items: center;
+        gap: 28px;
         overflow: visible !important;
         padding: 0 24px !important; /* folga lateral para evitar scroll ao hover */
       }}
@@ -865,7 +928,7 @@ with content_col:
             col = cols[i * 2]
             with col:
                 icon = folder_icons.get(folder, "📁")
-                if folder in ["Modelo de Jogo", "Adversários", "Treinos / Jogos e Compactos", "Preleções", "Feedbacks", "Bastidores"]:
+                if folder in ["Modelo de Jogo", "Adversários", "Treinos / Jogos e Compactos", "Preleções", "Feedbacks", "Bastidores", "Modelo de Trabalho"]:
                     is_active = (st.session_state.active_logo_section == folder and st.session_state.show_logos)
                     st.button(
                         label=f'{icon} {folder}',
