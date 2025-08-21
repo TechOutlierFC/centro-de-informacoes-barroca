@@ -315,6 +315,72 @@ st.markdown(
         transform: scale(1.1);
         background-color: #f8f8f8;
       }}
+      
+      /* --- Mobile: empilhado e rolável --- */
+      @media (max-width: 768px) {{
+        :root {{
+          --vpad: 12px;
+          --line-w: 3px;
+        }}
+
+        html, body, .stApp, [data-testid="stAppViewContainer"],
+        section.main, .main, .block-container {{
+          height: auto !important;
+          max-height: none !important;
+          overflow-y: auto !important;
+        }}
+
+        .barroca-shell {{
+          position: static;
+          inset: auto;
+          height: auto;
+          width: 100%;
+        }}
+
+        .barroca-row {{
+          display: flex;
+          flex-direction: column;
+          height: auto;
+          gap: 0;
+        }}
+
+        .barroca-col {{
+          height: auto;
+          padding: clamp(12px, 3vh, 20px);
+          border-right: none !important;
+          border-bottom: var(--line-w) solid var(--line-color);
+        }}
+
+        .barroca-col:last-child {{
+          border-bottom: none;
+        }}
+
+        .titulo-principal {{
+          font-size: clamp(1.2rem, 6vw, 1.8rem);
+        }}
+
+        .barroca-img {{
+          width: min(100%, 360px);
+          height: auto;
+        }}
+
+        .logo-img {{
+          height: clamp(40px, 9vh, 70px);
+        }}
+
+        .conquista-item {{
+          grid-template-columns: 0.6fr 0.6fr 1.6fr;
+          padding: 0 8px;
+        }}
+
+        .conquista-logo {{
+          height: clamp(38px, 7vh, 60px);
+        }}
+
+        .conquista-desc {{
+          font-size: clamp(0.85rem, 3.8vw, 1.1rem);
+        }}
+      }}
     </style>
     """,
     unsafe_allow_html=True,

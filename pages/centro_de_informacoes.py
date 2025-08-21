@@ -491,6 +491,25 @@ st.markdown(
       .drive-logo-prelecoes {{
         height: 70px; /* Altura reduzida para o logo do Drive */
       }}
+      /* Desktop: largura total abaixo da linha de botões */
+      .row-logos-wrapper {{
+        width: 100%;
+        padding: 0; /* sem padding extra */
+        margin-top: -34px; /* aproxima ainda mais os logos da linha de botões */
+        margin-bottom: 12px; /* leve respiro abaixo dos logos */
+      }}
+      .desktop-only .logo-bar-container {{
+        width: 100%;
+      }}
+      .active-folder-underline {{ display: none; }}
+      /* Linha de logos no desktop: ocupar toda a largura do container e não quebrar linha */
+      .desktop-row-logos {{
+        width: 100%;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        overflow-x: auto;
+        padding: 0 !important; /* sem padding extra */
+      }}
       /* Espaçamento entre botões (mesma linha e entre linhas) */
       [data-testid="column"] {{
         padding-left: 14px !important;
@@ -598,6 +617,198 @@ st.markdown(
         filter: none !important;
         opacity: 1 !important;
       }}
+      /* Neutralizar margens/paddings de wrappers markdown no desktop dentro da grid */
+      .folders-grid [data-testid="stMarkdownContainer"] {{
+        margin: 0 !important;
+        padding: 0 !important;
+      }}
+      .folders-grid [data-testid="stVerticalBlock"] {{
+        margin: 0 !important;
+        padding: 0 !important;
+      }}
+      /* Helpers para alternar layouts desktop/mobile sem afetar o desktop */
+      .desktop-only {{ display: block; }}
+      .mobile-only {{ display: none; }}
+      .folder-spacer {{ height: 0; }}
+      .row-spacer {{ height: 0; }}
+
+      /* ====== MOBILE ONLY (não altera desktop) ====== */
+      @media (max-width: 768px) {{
+        :root {{
+          --vpad: 12px;
+          --line-w: 3px;
+        }}
+
+        html, body, .stApp, [data-testid="stAppViewContainer"],
+        section.main, .main, .block-container {{
+          height: auto !important;
+          max-height: none !important;
+          overflow-y: auto !important;
+        }}
+
+        .top-section {{
+          padding-top: 12px;
+          padding-left: 12px;
+          padding-right: 12px;
+        }}
+
+        /* Recuo lateral consistente do container de pastas */
+        .folders-grid {{
+          padding-left: clamp(12px, 4vw, 20px);
+          padding-right: clamp(12px, 4vw, 20px);
+        }}
+
+        /* Lista mobile vertical (sem colunas do Streamlit) */
+        .mobile-folders-list {{
+          padding-left: clamp(12px, 4vw, 20px);
+          padding-right: clamp(12px, 4vw, 20px);
+        }}
+
+        /* Empilhar tudo em coluna com espaçamento adequado */
+        .folders-grid [data-testid="stHorizontalBlock"] {{
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 0 !important; /* evitamos gap para padronizar com margens controladas */
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }}
+        /* Esconde colunas espaçadoras (2,4,6) no mobile para não gerar saltos de espaço */
+        .folders-grid [data-testid="stHorizontalBlock"] > [data-testid="column"]:nth-of-type(2),
+        .folders-grid [data-testid="stHorizontalBlock"] > [data-testid="column"]:nth-of-type(4),
+        .folders-grid [data-testid="stHorizontalBlock"] > [data-testid="column"]:nth-of-type(6) {{
+          display: none !important;
+        }}
+        .folders-grid [data-testid="column"] {{
+          flex: 1 0 100% !important;
+          width: 100% !important;
+          padding-left: 6px !important;
+          padding-right: 6px !important;
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+          margin: 0 !important;
+        }}
+
+        /* Zera margens/paddings internos de blocos verticais do Streamlit */
+        .folders-grid [data-testid="stVerticalBlock"] {{
+          margin: 0 !important;
+          padding: 0 !important;
+        }}
+
+        /* Botões padronizados em tamanho/tipografia no mobile */
+        div[data-testid="stButton"] > button,
+        a.folder-btn {{
+          height: 64px !important;
+          font-size: 16px !important;
+          border-radius: 14px !important;
+          margin-bottom: 0 !important; /* espaçamento controlado pelo spacer */
+          padding: 10px 16px !important;
+          box-shadow: 5px 5px 0px 0px #FABB48 !important;
+          width: min(560px, 88vw) !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          box-sizing: border-box !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }}
+        /* O espaçamento entre itens será controlado apenas pelo spacer */
+        div[data-testid="stButton"] > button {{
+          margin-bottom: 0 !important; /* evita diferenças vs a.folder-btn */
+          margin-top: 0 !important;
+        }}
+        div[data-testid="stButton"] > button p {{
+          font-size: 16px !important;
+          line-height: 1.2 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }}
+        /* Zera margens dos wrappers; espaçamento é controlado pelo spacer */
+        div[data-testid="stButton"] {{
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }}
+        a.folder-btn {{
+          line-height: 1.2 !important;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }}
+
+        /* Padroniza espaçamento dos itens vindos de st.markdown (links de pasta) */
+        .folders-grid [data-testid="stMarkdownContainer"] {{
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }}
+        .folders-grid [data-testid="stMarkdownContainer"] p {{
+          margin: 0 !important;
+        }}
+
+        /* Controla o espaçamento vertical padronizado entre itens */
+        .folder-spacer {{ height: 24px; }}
+        .row-spacer {{ height: 24px; }}
+
+        /* Logos inline abaixo do botão clicado no mobile */
+        .inline-logos-wrapper {{
+          padding: 6px 8px 2px 8px;
+          margin-top: 10px;
+        }}
+        .logo-bar-container {{
+          display: grid !important;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          justify-items: center;
+          gap: 16px;
+          padding: 6px 0;
+        }}
+        .logo-item {{ height: 56px; }}
+        .drive-logo-prelecoes {{ height: 52px; }}
+
+        /* Alinhar logos inline à mesma largura do botão */
+        .inline-logos-wrapper .logo-bar-container {{
+          width: min(560px, 88vw);
+          margin-left: auto;
+          margin-right: auto;
+        }}
+
+        /* Modal refinado para mobile */
+        [data-testid="stDialog"] > div {{
+          padding: 20px 20px !important;
+          width: min(92vw, 520px) !important;
+          max-width: 92vw !important;
+        }}
+        .modal-title-text {{ font-size: 18px; }}
+        .modal-subtitle {{ font-size: 14px; }}
+        a.modal-btn {{
+          height: 48px;
+          font-size: 14px;
+          gap: 10px;
+          padding: 8px 12px;
+          box-shadow: 3px 3px 0px 0px #FABB48;
+        }}
+        .modal-options-container {{
+          max-height: 52vh;
+          padding-right: 18px;
+          margin-right: -18px;
+        }}
+        [data-testid="stDialog"] button[aria-label="Close"],
+        [data-testid="stDialog"] button[title="Close"],
+        [data-testid="stDialog"] [aria-label="Close"] {{
+          width: 32px !important;
+          height: 32px !important;
+        }}
+
+        /* Botão de voltar levemente menor */
+        .back-button {{
+          width: 36px;
+          height: 36px;
+          top: 14px;
+          left: 14px;
+        }}
+
+        /* Alternância de visibilidade desktop/mobile */
+        .desktop-only {{ display: none !important; }}
+        .mobile-only {{ display: block !important; }}
+      }}
     </style>
     """,
     unsafe_allow_html=True,
@@ -641,20 +852,29 @@ st.markdown(
 
 rows = [folders[i:i + 4] for i in range(0, len(folders), 4)]
 left_pad, content_col, right_pad = st.columns([0.05, 0.9, 0.05])
+
+# Placeholders por pasta (mobile) e por linha (desktop)
+folder_placeholders = {}
+row_placeholders = {}
+
 with content_col:
-    for row in rows:
+    st.markdown('<div class="folders-grid">', unsafe_allow_html=True)
+    for row_index, row in enumerate(rows):
         cols = st.columns([1, 0.06, 1, 0.06, 1, 0.06, 1])
         for i, folder in enumerate(row):
             col = cols[i * 2]
             with col:
                 icon = folder_icons.get(folder, "📁")
                 if folder in ["Modelo de Jogo", "Adversários", "Treinos / Jogos e Compactos", "Preleções", "Feedbacks", "Bastidores"]:
+                    is_active = (st.session_state.active_logo_section == folder and st.session_state.show_logos)
                     st.button(
                         label=f'{icon} {folder}',
                         on_click=lambda s=folder: set_or_toggle_logos(s),
                         key=f"folder_{folder}",
                         use_container_width=True
                     )
+                    if is_active:
+                        st.markdown('<div class="desktop-only active-folder-underline"></div>', unsafe_allow_html=True)
                 elif folder in folder_links:
                     st.markdown(
                         f'<a class="folder-btn" role="button" href="{folder_links[folder]}" target="_blank">{icon} {folder}</a>',
@@ -668,20 +888,58 @@ with content_col:
                         use_container_width=True
                     )
 
-logos_placeholder = st.empty()
+                # Placeholder mobile (logo abaixo do botão)
+                folder_placeholders[folder] = st.empty()
+                # Spacer padronizado (controla exclusivamente o espaçamento entre itens no mobile)
+                st.markdown('<div class="folder-spacer mobile-only"></div>', unsafe_allow_html=True)
+        # Placeholder desktop para a linha inteira de logos logo abaixo da linha de botões
+        row_ph = st.empty()
+        for f in row:
+            row_placeholders[f] = row_ph
+        # Spacer entre linhas (mobile)
+        st.markdown('<div class="row-spacer mobile-only"></div>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+
 if st.session_state.show_logos and st.session_state.active_logo_section in logo_sets:
     section = st.session_state.active_logo_section
     logos_html = build_logos_html(logo_sets[section], section=section)
-    logos_placeholder.markdown(
-        f"""
-        <div class="bottom-section">
-            <div class="logo-bar-container visible">
-                {logos_html}
+    
+    # Limpa placeholders antes de renderizar o ativo
+    for _name, _ph in folder_placeholders.items():
+        _ph.empty()
+    for _name, _rph in row_placeholders.items():
+        _rph.empty()
+
+    # Desktop: renderiza na largura total da linha (placeholder da linha)
+    row_ph = row_placeholders.get(section)
+    if row_ph is not None:
+        row_ph.markdown(
+            f"""
+            <div class=\"row-logos-wrapper\">
+              <div class=\"desktop-only\" style=\"width:100%;\">
+                <div class=\"logo-bar-container visible desktop-row-logos\">
+                  {logos_html}
+                </div>
+              </div>
             </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+            """,
+            unsafe_allow_html=True,
+        )
+
+    # Mobile: renderiza no placeholder da pasta específica
+    inline_ph = folder_placeholders.get(section)
+    if inline_ph is not None:
+        inline_ph.markdown(
+            f"""
+            <div class=\"mobile-only inline-logos-wrapper\">
+              <div class=\"logo-bar-container visible\">
+                {logos_html}
+              </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 else:
-    logos_placeholder.empty()
+    # Não renderiza nada quando não há seção ativa
+    pass
 
