@@ -29,7 +29,27 @@ def get_logo_html(filename: str, link: str = "#", class_name: str = "logo-img") 
     )
 
 
-st.markdown('<a href="/centro_de_informacoes" target="_self" class="back-button" title="Voltar ao Centro de Informações"> &#x21A9; </a>', unsafe_allow_html=True)
+try:
+    query_params = st.query_params
+    if "go" in query_params:
+        dest = query_params["go"]
+        query_params.clear()
+        try:
+            if dest == "centro":
+                st.switch_page("pages/centro_de_informacoes.py")
+        except Exception:
+            st.markdown(
+                """
+                <script>
+                try { window.location.href = './centro_de_informacoes'; } catch (e) {}
+                </script>
+                """,
+                unsafe_allow_html=True,
+            )
+except AttributeError:
+    pass
+
+st.markdown('<a href="?go=centro" target="_self" class="back-button" title="Voltar ao Centro de Informações"> &#x21A9; </a>', unsafe_allow_html=True)
 
 YELLOW = "#FFA500"
 

@@ -25,7 +25,27 @@ def get_logo_html(filename, class_name="logo-img"):
 
 st.set_page_config(page_title="Apresentação Barroca", page_icon="🏆", layout="wide")
 
-st.markdown('<a href="/" target="_self" class="back-button" title="Voltar à página inicial"> &#x21A9; </a>', unsafe_allow_html=True)
+try:
+    query_params = st.query_params
+    if "go" in query_params:
+        dest = query_params["go"]
+        query_params.clear()
+        try:
+            if dest == "home":
+                st.switch_page("app.py")
+        except Exception:
+            st.markdown(
+                """
+                <script>
+                try { window.location.href = './'; } catch (e) {}
+                </script>
+                """,
+                unsafe_allow_html=True,
+            )
+except AttributeError:
+    pass
+
+st.markdown('<a href="?go=home" target="_self" class="back-button" title="Voltar à página inicial"> &#x21A9; </a>', unsafe_allow_html=True)
 
 YELLOW = "#FFA500"
 
