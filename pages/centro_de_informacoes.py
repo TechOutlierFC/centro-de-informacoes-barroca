@@ -105,7 +105,6 @@ modal_configs = {
         "options": [
             {"icon": drive_icon, "label": "Série B - 2024", "link": "https://drive.google.com/drive/folders/1EstvgKUL9NebBoHxHJkd5Ka23Xu48KWL"},
             {"icon": drive_icon, "label": "Catarinense - 2024", "link": "https://drive.google.com/drive/folders/1tAafifOJ6ZstMJyDgf1Syaw5QrpyPYwv"},
-            {"icon": youtube_icon, "label": "Apresentações - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_v2h7NPr4xvPpDG9cSNGtK"},
             {"icon": youtube_icon, "label": "TV - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_WDJNfookf4KPg3yFLlM1V"},
             {"icon": drive_icon, "label": "Relatórios Mensais - 2024", "link": "https://drive.google.com/drive/folders/1S5HAAsnYeyYMaqVSVML3f3SnzJp5poUE"},
             {"icon": drive_icon, "label": "Estatísticas Série B - 2024", "link": "https://drive.google.com/drive/folders/1shwUfvzgQ9fy6p3ZxY1G6YRv2EijJeER"},
@@ -276,7 +275,7 @@ logo_sets = {
     "Modelo de Trabalho": work_model_logos_files,
     "Preleções": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp", "drive.png"],
     "Feedbacks": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp"],
-    "Bastidores": ["crb.png"]
+    "Bastidores": ["crb.png", "avai.png"]
 }
 
 logo_link_overrides = {
@@ -308,7 +307,8 @@ logo_link_overrides = {
         "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1yHIKCWD8IhaRTc8An_EI7xOv5Zm5jtkr"
     },
     "Bastidores": {
-        "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ"
+        "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ",
+        "avai.png": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_v2h7NPr4xvPpDG9cSNGtK"
     },
     "Modelo de Trabalho": {
         "ajax.png": "https://drive.google.com/drive/u/1/folders/1oD6D3bXOjuJ9l6Ub1-xTKtCP2yDhwlXu",
