@@ -96,19 +96,16 @@ modal_configs = {
             {"icon": youtube_icon, "label": "Treinos Junho - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-Wp6oCkcJwRbJTQtlLBUmC"},
             {"icon": youtube_icon, "label": "Desenvolvimento Individual - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-Wp6oCkcJwRbJTQtlLBUmC"},
             {"icon": youtube_icon, "label": "Intercorrências / Lesões - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_wwlk6dHkTkM1-pkdwV-sk"},
+            {"icon": youtube_icon, "label": "TV - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_WDJNfookf4KPg3yFLlM1V"},
         ]
     },
-    "avai_prelecoes": {
+    "avai_bastidores": {
         "title": "AVAÍ",
         "logo": "avai.png",
-        "dialog_title": "Preleções",
+        "dialog_title": "Bastidores",
         "options": [
-            {"icon": drive_icon, "label": "Série B - 2024", "link": "https://drive.google.com/drive/folders/1EstvgKUL9NebBoHxHJkd5Ka23Xu48KWL"},
-            {"icon": drive_icon, "label": "Catarinense - 2024", "link": "https://drive.google.com/drive/folders/1tAafifOJ6ZstMJyDgf1Syaw5QrpyPYwv"},
-            {"icon": youtube_icon, "label": "TV - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_WDJNfookf4KPg3yFLlM1V"},
-            {"icon": drive_icon, "label": "Relatórios Mensais - 2024", "link": "https://drive.google.com/drive/folders/1S5HAAsnYeyYMaqVSVML3f3SnzJp5poUE"},
-            {"icon": drive_icon, "label": "Estatísticas Série B - 2024", "link": "https://drive.google.com/drive/folders/1shwUfvzgQ9fy6p3ZxY1G6YRv2EijJeER"},
-            {"icon": drive_icon, "label": "Estatísticas Catarinense - 2024", "link": "https://drive.google.com/drive/folders/1W9CRbTjkrKZPfkidk1LHqMSqCM6k1vFz"},
+            {"icon": youtube_icon, "label": "Apresentações - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_v2h7NPr4xvPpDG9cSNGtK"},
+            {"icon": drive_icon, "label": "Série B - 2024", "link": "https://drive.google.com/drive/u/1/folders/1ztxV3fJvJeZZ1wlZZS9AHr_UBpOjiinh"},
         ]
     },
     "mirassol_feedbacks": {
@@ -127,6 +124,9 @@ modal_configs = {
         "options": [
             {"icon": youtube_icon, "label": "Pós-Jogo Série B - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW9tEgrPuWh5KT5d9ZN7OIxo"},
             {"icon": youtube_icon, "label": "Pós-Jogo Catarinense", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-tfrnwYjuXdYDeNTBkkokx"},
+            {"icon": drive_icon, "label": "Relatórios Mensais - 2024", "link": "https://drive.google.com/drive/folders/1S5HAAsnYeyYMaqVSVML3f3SnzJp5poUE"},
+            {"icon": drive_icon, "label": "Estatísticas Série B - 2024", "link": "https://drive.google.com/drive/folders/1shwUfvzgQ9fy6p3ZxY1G6YRv2EijJeER"},
+            {"icon": drive_icon, "label": "Estatísticas Catarinense - 2024", "link": "https://drive.google.com/drive/folders/1W9CRbTjkrKZPfkidk1LHqMSqCM6k1vFz"},
         ]
     }
 }
@@ -296,7 +296,7 @@ logo_link_overrides = {
     "Preleções": {
         "mirassol.png": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHive6C_Mnty82kxH-z5ICy8",
         "crb.png": "https://drive.google.com/drive/folders/1Z8otxolgB7sZicz_c2owOHiKw9936ANS",
-        "avai.png": "?modal=avai_prelecoes",
+        "avai.png": "https://drive.google.com/drive/u/1/folders/1wtrLLTRlQh-t37YKNROV_8RTobhAxT8-",
         "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1_3mQW0w1eEPUEEsJXhKfeSG2iFXiHHCp",
         "drive.png": "https://drive.google.com/drive/u/1/folders/1xG8Bbm2EypoWLFEee7u_vda9F22iQzGg"
     },
@@ -308,7 +308,7 @@ logo_link_overrides = {
     },
     "Bastidores": {
         "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ",
-        "avai.png": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_v2h7NPr4xvPpDG9cSNGtK"
+        "avai.png": "?modal=avai_bastidores"
     },
     "Modelo de Trabalho": {
         "ajax.png": "https://drive.google.com/drive/u/1/folders/1oD6D3bXOjuJ9l6Ub1-xTKtCP2yDhwlXu",
