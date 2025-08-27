@@ -5,8 +5,28 @@ from datetime import datetime
 
 st.set_page_config(page_title="Números na Carreira", page_icon="📊", layout="wide")
 
+try:
+    query_params = st.query_params
+    if "go" in query_params:
+        dest = query_params["go"]
+        query_params.clear()
+        try:
+            if dest == "outlier":
+                st.switch_page("pages/outlier_fc.py")
+        except Exception:
+            st.markdown(
+                """
+                <script>
+                try { window.location.href = './outlier_fc'; } catch (e) {}
+                </script>
+                """,
+                unsafe_allow_html=True,
+            )
+except AttributeError:
+    pass
+
 # Botão voltar seguindo padrão (usa query param e fallback de redirect do Streamlit)
-st.markdown('<a href="/outlier_fc" target="_self" class="back-button" title="Voltar ao OutlierFC"> &#x21A9; </a>', unsafe_allow_html=True)
+st.markdown('<a href="?go=outlier" target="_self" class="back-button" title="Voltar à OutlierFC"> &#x21A9; </a>', unsafe_allow_html=True)
 
 YELLOW = "#FFA500"
 
