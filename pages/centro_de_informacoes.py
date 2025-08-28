@@ -273,7 +273,7 @@ logo_sets = {
     "Adversários": ["crb.png", "avai.png"],
     "Treinos / Jogos e Compactos": training_logos_files,
     "Modelo de Trabalho": work_model_logos_files,
-    "Preleções": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp", "drive.png"],
+    "Preleções": ["mirassol.png", "crb.png", "avai.png", "ceara.png", "coritiba.webp", "drive.png"],
     "Feedbacks": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp"],
     "Bastidores": ["crb.png", "avai.png"]
 }
@@ -297,6 +297,7 @@ logo_link_overrides = {
         "mirassol.png": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHive6C_Mnty82kxH-z5ICy8",
         "crb.png": "https://drive.google.com/drive/folders/1Z8otxolgB7sZicz_c2owOHiKw9936ANS",
         "avai.png": "https://drive.google.com/drive/u/1/folders/1wtrLLTRlQh-t37YKNROV_8RTobhAxT8-",
+        "ceara.png": "https://drive.google.com/drive/u/1/folders/13hqM9vrHGIICq-yQZREjMmJ3pq7HrJNO",
         "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1_3mQW0w1eEPUEEsJXhKfeSG2iFXiHHCp",
         "drive.png": "https://drive.google.com/drive/u/1/folders/1xG8Bbm2EypoWLFEee7u_vda9F22iQzGg"
     },
