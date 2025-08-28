@@ -69,7 +69,7 @@ button_style = """
     .fixed-update {
         position: fixed;
         font-size: 18px;
-        right: 16px;
+        left: 16px;
         bottom: 12px;
         font-style: italic;
         color: #ffffff;
