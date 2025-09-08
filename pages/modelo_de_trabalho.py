@@ -286,8 +286,6 @@ logos_html = "".join(
 )
 
 col2_buttons_html = """
-<a class="folder-btn" role="button" href="https://drive.google.com/drive/u/1/folders/1dPULBvah1pSCTufASiBEQfGKbPO_Gzke" target="_blank">🚧 Modelos De Trabalho na Prática</a>
-<div style="height: 28px;"></div>
 <a class="folder-btn" role="button" href="https://drive.google.com/drive/u/1/folders/1rA8IBOzfegLLJRtl_9GgFh0tSjzxCOB3" target="_blank">✅ Checklist</a>
 <div style="height: 28px;"></div>
 <a class="folder-btn" role="button" href="https://drive.google.com/drive/u/1/folders/1k3GpCbc5nQWIMz9qw0zellwHgYmO912G" target="_blank">👤 Modelos de Trabalhos Autorais</a>

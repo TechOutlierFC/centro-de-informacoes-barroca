@@ -15,11 +15,20 @@ def get_image_as_base64(path):
         return ""
 
 def get_logo_html(filename, class_name="logo-img", link="#"):
+    # Tratamento especial para o ícone de "+"
+    if filename == "plus_icon":
+        target = "_self" if link.startswith("?") or link.startswith("/") else "_blank"
+        return f'''<a href="{link}" target="{target}" class="{class_name}" style="display: inline-block; width: 85px; height: 85px; background-color: #FFA500; border-radius: 50%; text-align: center; line-height: 85px; font-size: 24px; font-weight: bold; color: white; text-decoration: none; transition: transform 0.2s ease-in-out; font-family: 'Anton', sans-serif;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+        </a>'''
+
     logo_path = LOGO_DIR / filename
     ext = logo_path.suffix.strip('.')
     encoded_logo = get_image_as_base64(logo_path)
     if encoded_logo:
-        target = "_self" if link.startswith("?") else "_blank"
+        target = "_self" if link.startswith("?") or link.startswith("/") else "_blank"
         return f'<a href="{link}" target="{target}"><img class="{class_name}" src="data:image/{ext};base64,{encoded_logo}" alt="{filename}"></a>'
     return ""
 
@@ -128,6 +137,64 @@ modal_configs = {
             {"icon": drive_icon, "label": "Estatísticas Série B - 2024", "link": "https://drive.google.com/drive/folders/1shwUfvzgQ9fy6p3ZxY1G6YRv2EijJeER"},
             {"icon": drive_icon, "label": "Estatísticas Catarinense - 2024", "link": "https://drive.google.com/drive/folders/1W9CRbTjkrKZPfkidk1LHqMSqCM6k1vFz"},
         ]
+    },
+    "botafogo_training": {
+        "title": "BOTAFOGO",
+        "logo": "botafogo.png",
+        "dialog_title": "Treinos / Jogos e Compactos",
+        "options": [
+            {"icon": youtube_icon, "label": "Resumos de Treino", "link": "https://www.youtube.com/playlist?list=PLHE5_tUyoOhMYO-vfxmki9gyFZhYbNgpS"},
+            {"icon": drive_icon, "label": "Resumos de Treino", "link": "https://drive.google.com/drive/u/1/folders/1dV8j9tHjuOwhKwlmkix-uowp5f3rk3WK?hl=pt-br"},
+            {"icon": youtube_icon, "label": "Jogos Completos", "link": "https://www.youtube.com/watch?v=AWT59LSPr0w&ab_channel=BotafogoFRAnalise"},
+        ]
+    },
+    "botafogo_feedbacks": {
+        "title": "BOTAFOGO",
+        "logo": "botafogo.png",
+        "dialog_title": "Feedbacks",
+        "options": [
+            {"icon": youtube_icon, "label": "Feedbacks Individuais", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhNK9TYRzXibXdOnEx-BgdLs&feature=shared"},
+            {"icon": youtube_icon, "label": "Feedbacks Coletivos", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhO72Icp9CrpfZuiBSxlzVnh&feature=shared"},
+        ]
+    },
+    "botafogo": {
+        "title": "BOTAFOGO",
+        "logo": "botafogo.png",
+        "dialog_title": "Treinos / Jogos e Compactos",
+        "sections": [
+            {
+                "title": "Ativações",
+                "options": [
+                    {"icon": youtube_icon, "label": "Ativação Física Analítica", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhO4xdMv14vvHKrbav4V_rn1&feature=shared"},
+                    {"icon": youtube_icon, "label": "Ativação Física Conceitual", "link": "https://www.youtube.com/watch?v=NW3XKHkY2yU&ab_channel=BotafogoFRAnalise"},
+                    {"icon": youtube_icon, "label": "Ativação Física Lúdica", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhM7d_t5dYPQMfd0d2Tzr4v5&feature=shared"},
+                ]
+            },
+            {
+                "title": "Preparação",
+                "options": [
+                    {"icon": youtube_icon, "label": "Preparação em Rondos", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhMrlV4HmKyEklFHUuTwpRJa&feature=shared"},
+                    {"icon": drive_icon, "label": "Preparação em Rondos", "link": "https://drive.google.com/drive/u/1/folders/1V9uo19rDFeNjMC7RmDpxXInpizegKD3i"},
+                    {"icon": youtube_icon, "label": "Preparação Técnica", "link": "https://www.youtube.com/watch?v=vpFK9OcjbeM&ab_channel=BotafogoFRAnalise"},
+                    {"icon": drive_icon, "label": "Preparação em Confrontos", "link": "https://drive.google.com/drive/u/1/folders/153EWxlm1bsgXGrtea6Jhs9VbgLDkvK4n"}
+                ]
+            },
+            {
+                "title": "Parte Principal",
+                "options": [
+                    {"icon": youtube_icon, "label": "Parte Principal", "link": "https://www.youtube.com/watch?v=KbXNb3CqVMI&list=PLHE5_tUyoOhMmtHHEwcLYWwZHZmqU0lj9&ab_channel=BotafogoFRAnalise"},
+                ]
+            },
+            {
+                "title": "Complemento",
+                "options": [
+                    {"icon": youtube_icon, "label": "Complemento Intersetorial", "link": "https://www.youtube.com/watch?v=8s_UO6ZIxOk&ab_channel=BotafogoFRAnalise"},
+                    {"icon": youtube_icon, "label": "Complemento Setorial", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhN2EQsbbQUWXw7_ldrH4JPF&feature=shared"},
+                    {"icon": drive_icon, "label": "Complemento Setorial", "link": "https://drive.google.com/drive/u/1/folders/1JVBBJWGrg06L7Nzt3bAFPDuGwX54ZXuz"},
+                    {"icon": youtube_icon, "label": "Complemento Individual", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhMPkicK29391ZpeCIlUgjBN&feature=shared"},
+                ]
+            }
+        ]
     }
 }
 
@@ -144,20 +211,33 @@ def team_modal(config):
         '</div>'
     )
 
-    options_html = "".join([
-        f'<a class="modal-btn" role="button" href="{opt["link"]}" target="_blank">{opt["icon"]}<span class="modal-btn-text">{opt["label"]}</span></a>'
-        for opt in config["options"]
-    ])
+    # Verificar se tem seções estruturadas ou lista simples de opções
+    if "sections" in config:
+        # Modal com seções estruturadas
+        sections_html_parts = []
+        for i, section in enumerate(config["sections"]):
+            section_options_html = ""
+            for opt in section["options"]:
+                section_options_html += f'<a class="modal-btn" role="button" href="{opt["link"]}" target="_blank">{opt["icon"]}<span class="modal-btn-text">{opt["label"]}</span></a>'
 
-    full_html = f"""
-    <div class="custom-modal-content">
-        {header_html}
-        <div class="modal-subtitle">Selecione uma das opções abaixo:</div>
-        <div class="modal-options-container">
-            {options_html}
-        </div>
-    </div>
-    """
+            section_html = f'<div class="modal-section"><div class="modal-section-title">{section["title"]}</div><div class="modal-section-options">{section_options_html}</div></div>'
+            sections_html_parts.append(section_html)
+
+            # Adicionar divisor entre seções (exceto após a última)
+            if i < len(config["sections"]) - 1:
+                sections_html_parts.append('<div class="modal-section-divider"></div>')
+
+        sections_html = "".join(sections_html_parts)
+
+        full_html = f'<div class="custom-modal-content">{header_html}<div class="modal-subtitle">Selecione uma das opções abaixo:</div><div class="modal-options-container">{sections_html}</div></div>'
+    else:
+        # Modal com lista simples (compatibilidade com modais existentes)
+        options_html = ""
+        for opt in config["options"]:
+            options_html += f'<a class="modal-btn" role="button" href="{opt["link"]}" target="_blank">{opt["icon"]}<span class="modal-btn-text">{opt["label"]}</span></a>'
+
+        full_html = f'<div class="custom-modal-content">{header_html}<div class="modal-subtitle">Selecione uma das opções abaixo:</div><div class="modal-options-container">{options_html}</div></div>'
+
     st.markdown(full_html, unsafe_allow_html=True)
 
 
@@ -185,6 +265,7 @@ YELLOW = "#FFA500"
 
 folder_icons = {
     "Adversários": "🆚",
+    "BARROCA 360°": "👤",
     "Bastidores": "🎬",
     "Clubes Alvo": "🎯",
     "Feedbacks": "💬",
@@ -200,6 +281,7 @@ folder_icons = {
 folders = sorted(folder_icons.keys())
 
 folder_links = {
+    "BARROCA 360°": "/barroca_360",
     "Referências Externas": "https://drive.google.com/drive/u/1/folders/1MzFZ5sJv3Ox1Q9Foa0Q4fWEPiYymYv-D",
     "Mercado e Banco de Dados": "https://drive.google.com/drive/u/1/folders/1er6TRhp4N4gB7nbo-XpxOv_2fadDpf2w",
     "Clubes Alvo": "https://drive.google.com/drive/u/1/folders/19HOmXsn-ewfPaD5TBipojWCXu8c8a3_k",
@@ -272,9 +354,9 @@ logo_sets = {
     "Modelo de Jogo": model_logos_files,
     "Adversários": ["crb.png", "avai.png"],
     "Treinos / Jogos e Compactos": training_logos_files,
-    "Modelo de Trabalho": work_model_logos_files,
+    "Modelo de Trabalho": ["avai.png", "botafogo.png", "plus_icon"],
     "Preleções": ["mirassol.png", "crb.png", "avai.png", "ceara.png", "coritiba.webp", "drive.png"],
-    "Feedbacks": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp"],
+    "Feedbacks": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp", "botafogo.png"],
     "Bastidores": ["crb.png", "avai.png"]
 }
 
@@ -288,7 +370,7 @@ logo_link_overrides = {
         "avai.png": "?modal=avai",
         "vitoria.png": "https://drive.google.com/drive/u/1/folders/1ChLG6YEOAFG2reU8BKvnUFxL_KkwrDid?hl=pt-br",
         "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1H7mn2PgIUHOlRJOxg0RFs_ricOpt1mdV?hl=pt-br",
-        "botafogo.png": "https://drive.google.com/drive/u/1/folders/1FMlEn6qlpsH4ne-baCVYBra0XC9erurO?hl=pt-br",
+        "botafogo.png": "?modal=botafogo_training",
         "corinthians.png": "https://drive.google.com/drive/u/1/folders/14sAmVS68jo7QNhLvR2flKTcLf7iNqrIL?hl=pt-br",
         "brasil.png": "https://drive.google.com/drive/u/1/folders/1G8yS3L5bP7toP2RjCl8nJycED7T7AkeR?hl=pt-br",
         "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqXG9P0xNWlNT6IUPU9KmOn"
@@ -305,40 +387,17 @@ logo_link_overrides = {
         "mirassol.png": "?modal=mirassol_feedbacks",
         "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqmM-UjXstIKW_mf9OXSMSG",
         "avai.png": "?modal=avai_feedbacks",
-        "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1yHIKCWD8IhaRTc8An_EI7xOv5Zm5jtkr"
+        "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1yHIKCWD8IhaRTc8An_EI7xOv5Zm5jtkr",
+        "botafogo.png": "?modal=botafogo_feedbacks"
     },
     "Bastidores": {
         "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ",
         "avai.png": "?modal=avai_bastidores"
     },
     "Modelo de Trabalho": {
-        "ajax.png": "https://drive.google.com/drive/u/1/folders/1oD6D3bXOjuJ9l6Ub1-xTKtCP2yDhwlXu",
-        "bilbao.png": "https://drive.google.com/drive/u/1/folders/1B_TsMNUG7R4oIfjwquMbiVCCQEmPdtUJ",
-        "atletico_madrid.png": "https://drive.google.com/drive/u/1/folders/1YqfxUpfsG9cj-bKK61wrLBq4POOLTQa3",
-        "leverkusen.png": "https://drive.google.com/drive/u/1/folders/1s2L4-wc3RlRZEBoWbkSrRQDHqnZjuUlc",
-        "dortmund.png": "https://drive.google.com/drive/u/1/folders/1z-ApLoWgZ2YEKYcR8wLNIM9C8ysG5Qys",
-        "monchengladbach.png": "https://drive.google.com/drive/u/1/folders/1j3KDH_5HJAtdTvUgWQDGCINtylQD01Zd",
-        "chelsea.png": "https://drive.google.com/drive/u/1/folders/14xrFUZIgsXfPM0OuzLTdw3rDxrOOWRwN",
-        "brugge.png": "https://drive.google.com/drive/u/1/folders/1d7Tl8wZUUHJcHmFtfrtcB51TLo_A_fN3",
-        "crystal_palace.png": "https://drive.google.com/drive/u/1/folders/1rIeecrBHq-Gwhd3RqV5cCAccaB7WEI3w",
-        "everton.png": "https://drive.google.com/drive/u/1/folders/15q38rIw5ZaG1629GoVMfR7PtXA4-yHTf",
-        "barcelona.png": "https://drive.google.com/drive/u/1/folders/1vKw088JhgDQpOsBPcwwwnNXV6TnS1A_7",
-        "bayern.png": "https://drive.google.com/drive/u/1/folders/1BRYpF3uLrQdyY9fAlnAXkuGLxIziqfOo",
-        "schalke.png": "https://drive.google.com/drive/u/1/folders/1hQsJmx2yBVKfKKR9DtmwSA35Qh6rjd4t",
-        "mainz.png": "https://drive.google.com/drive/u/1/folders/1ie_bQ8Atr-cjOCDi3khoVU5ZzKi9PigU",
-        "hibernian.png": "https://drive.google.com/drive/u/1/folders/1FNqRUklzi3YV8xAtRaxbd6M0e_Esc-Dt",
-        "inter.png": "https://drive.google.com/drive/u/1/folders/1eWqQ6or_3RAzaYtjrXxmPM3atyUY8UyQ",
-        "liverpool.png": "https://drive.google.com/drive/u/1/folders/18-1zg-DaWqWjTGsclcqk7XvStl-l5_jD",
-        "mallorca.png": "https://drive.google.com/drive/u/1/folders/1_yWWVwNzRikp5xC0hElPJdqm1Ob21-4L",
-        "city.png": "https://drive.google.com/drive/u/1/folders/1db5Q6SLyhjMqBBy1B_5p5PVHOnkcQB40",
-        "napoli.png": "https://drive.google.com/drive/u/1/folders/1yZqkzkrll-jbRdBaWPrM19Ctupr0I6Tx",
-        "psg.png": "https://drive.google.com/drive/u/1/folders/1LmOv7srn2h-E_37zFLF45w_6D6peJKqX",
-        "leipzig.png": "https://drive.google.com/drive/u/1/folders/1EaXMf8NL8neRNECQV9YjHVV67FUxwl0j",
-        "stuttgart.png": "https://drive.google.com/drive/u/1/folders/1QUGlh47uM-6VwbvXOpPvDHjadhYfrKta",
-        "villarreal.png": "https://drive.google.com/drive/u/1/folders/10U-YB78Bqsny7cQ8iMFeb76ff41UzIh-",
-        "wolfsburg.png": "https://drive.google.com/drive/u/1/folders/1RznACZfDV30ew-4cLQsQnMDCxOK0ck7V",
-        "cone.png": "https://drive.google.com/drive/u/1/folders/1dPULBvah1pSCTufASiBEQfGKbPO_Gzke",
-        "check.png": "https://drive.google.com/drive/u/1/folders/1rA8IBOzfegLLJRtl_9GgFh0tSjzxCOB3"
+        "avai.png": "https://drive.google.com/drive/u/1/folders/1UU5oTJjI2EnHknmSfj0jhAtZ4zuYdBbg",
+        "botafogo.png": "?modal=botafogo",
+        "plus_icon": "/modelo_de_trabalho"
     }
 }
 
@@ -627,6 +686,34 @@ st.markdown(
         padding: 10px 25px 10px 10px; /* T R B L - Padding para hover e scroll */
         margin-right: -25px; /* Compensa o padding para esconder o scroll */
       }}
+      /* Estilos para seções estruturadas */
+      .modal-section {{
+        margin-bottom: 20px;
+      }}
+      .modal-section:last-child {{
+        margin-bottom: 0;
+      }}
+      .modal-section-title {{
+        font-family: 'Anton', sans-serif !important;
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFA500;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        padding-left: 8px;
+        border-left: 3px solid #FFA500;
+      }}
+      .modal-section-options {{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }}
+      .modal-section-divider {{
+        height: 1px;
+        background-color: #e0e0e0;
+        margin: 20px 0;
+        border: none;
+      }}
       .modal-header-row {{
         display: flex;
         align-items: center;
@@ -857,6 +944,21 @@ st.markdown(
           padding-right: 18px;
           margin-right: -18px;
         }}
+        /* Estilos mobile para seções estruturadas */
+        .modal-section {{
+          margin-bottom: 16px;
+        }}
+        .modal-section-title {{
+          font-size: 14px;
+          margin-bottom: 10px;
+          padding-left: 6px;
+        }}
+        .modal-section-options {{
+          gap: 6px;
+        }}
+        .modal-section-divider {{
+          margin: 16px 0;
+        }}
         [data-testid="stDialog"] button[aria-label="Close"],
         [data-testid="stDialog"] button[title="Close"],
         [data-testid="stDialog"] [aria-label="Close"] {{
@@ -944,6 +1046,18 @@ with content_col:
                         st.markdown('<div class="desktop-only active-folder-underline"></div>', unsafe_allow_html=True)
                 elif folder in folder_links:
                     if folder == "Modelo de Trabalho":
+                        # Modelo de Trabalho agora mostra logos em vez de link direto
+                        is_active = (st.session_state.active_logo_section == folder and st.session_state.show_logos)
+                        st.button(
+                            label=f'{icon} {folder}',
+                            on_click=lambda s=folder: set_or_toggle_logos(s),
+                            key=f"folder_{folder}",
+                            use_container_width=True
+                        )
+                        if is_active:
+                            st.markdown('<div class="desktop-only active-folder-underline"></div>', unsafe_allow_html=True)
+                    elif folder == "BARROCA 360°":
+                        # BARROCA 360° usa navegação interna igual ao Modelo de Trabalho
                         st.markdown(
                             f'<a class="folder-btn" role="button" href="{folder_links[folder]}" target="_self">{icon} {folder}</a>',
                             unsafe_allow_html=True,
