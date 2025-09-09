@@ -76,6 +76,15 @@ drive_icon = """
 """
 
 modal_configs = {
+    "crb_adversarios": {
+        "title": "CRB",
+        "logo": "crb.png",
+        "dialog_title": "Adversários",
+        "options": [
+            {"icon": youtube_icon, "label": "Vídeos Adversários - 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhrWq-70HNRvDhNYRj1JT6de"},
+            {"icon": drive_icon, "label": "Série B - 2025", "link": "https://drive.google.com/drive/u/1/folders/1u9qMZEP4ZIKc27h0g1Bu5tvgUL4ZcZ5F"},
+        ]
+    },
     "mirassol": {
         "title": "MIRASSOL",
         "logo": "mirassol.png",
@@ -174,7 +183,6 @@ modal_configs = {
                 "title": "Preparação",
                 "options": [
                     {"icon": youtube_icon, "label": "Preparação em Rondos", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhMrlV4HmKyEklFHUuTwpRJa&feature=shared"},
-                    {"icon": drive_icon, "label": "Preparação em Rondos", "link": "https://drive.google.com/drive/u/1/folders/1V9uo19rDFeNjMC7RmDpxXInpizegKD3i"},
                     {"icon": youtube_icon, "label": "Preparação Técnica", "link": "https://www.youtube.com/watch?v=vpFK9OcjbeM&ab_channel=BotafogoFRAnalise"},
                     {"icon": drive_icon, "label": "Preparação em Confrontos", "link": "https://drive.google.com/drive/u/1/folders/153EWxlm1bsgXGrtea6Jhs9VbgLDkvK4n"}
                 ]
@@ -190,7 +198,6 @@ modal_configs = {
                 "options": [
                     {"icon": youtube_icon, "label": "Complemento Intersetorial", "link": "https://www.youtube.com/watch?v=8s_UO6ZIxOk&ab_channel=BotafogoFRAnalise"},
                     {"icon": youtube_icon, "label": "Complemento Setorial", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhN2EQsbbQUWXw7_ldrH4JPF&feature=shared"},
-                    {"icon": drive_icon, "label": "Complemento Setorial", "link": "https://drive.google.com/drive/u/1/folders/1JVBBJWGrg06L7Nzt3bAFPDuGwX54ZXuz"},
                     {"icon": youtube_icon, "label": "Complemento Individual", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhMPkicK29391ZpeCIlUgjBN&feature=shared"},
                 ]
             }
@@ -362,7 +369,7 @@ logo_sets = {
 
 logo_link_overrides = {
     "Adversários": {
-        "crb.png": "https://drive.google.com/drive/u/1/folders/1mqbqbGPaAvuqreEUx1vNZtfEBibv-LaY",
+        "crb.png": "?modal=crb_adversarios",
         "avai.png": "https://drive.google.com/drive/u/1/folders/1SHbQVTQVOAjF8Z65sujbBxDt-qV1zOXw",
     },
     "Treinos / Jogos e Compactos": {
