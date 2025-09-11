@@ -468,7 +468,7 @@ modal_configs = {
     # Profissional
     "ideallize": {
         "dialog_title": "Barroca Profissional",
-        "subtitle": "Ideallize - Acessoria de Imprensa",
+        "subtitle": "Ideallize - Assessoria de Imprensa",
         "options": [
             {"icon": handshake_icon, "label": "Prospecção"},
             {"icon": history_icon, "label": "Histórico"},
