@@ -229,6 +229,35 @@ st.markdown(
         margin-right: -25px;
       }}
 
+      /* Estrutura de seções dentro do modal */
+      .modal-section {{
+        margin-bottom: 20px;
+      }}
+      .modal-section:last-child {{
+        margin-bottom: 0;
+      }}
+      .modal-section-title {{
+        font-family: 'Anton', sans-serif !important;
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFA500;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        padding-left: 8px;
+        border-left: 3px solid #FFA500;
+      }}
+      .modal-section-options {{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }}
+      .modal-section-divider {{
+        height: 1px;
+        background-color: #e0e0e0;
+        margin: 20px 0;
+        border: none;
+      }}
+
       /* Botão-âncora com visual padronizado (igual ao Centro de Informações) */
       a.folder-btn {{
         background-color: white;
@@ -344,6 +373,21 @@ st.markdown(
           max-height: 52vh;
           padding-right: 18px;
           margin-right: -18px;
+        }}
+        /* Seções no mobile */
+        .modal-section {{
+          margin-bottom: 16px;
+        }}
+        .modal-section-title {{
+          font-size: 14px;
+          margin-bottom: 10px;
+          padding-left: 6px;
+        }}
+        .modal-section-options {{
+          gap: 6px;
+        }}
+        .modal-section-divider {{
+          margin: 16px 0;
         }}
       }}
     </style>
@@ -532,29 +576,106 @@ modal_configs = {
             {"icon": alert_icon, "label": "Passivos em Geral"},
         ],
     },
+    # Profissional/Pessoal adicionais
+    "estudos": {
+        "dialog_title": "Barroca Profissional",
+        "subtitle": "Estudos",
+        "options": [
+            {"icon": file_text_icon, "label": "Inglês"},
+            {"icon": target_icon, "label": "Adversários"},
+            {"icon": link_icon, "label": "Referências"},
+        ],
+    },
+    "planejamento_financeiro": {
+        "dialog_title": "Barroca Pessoal",
+        "subtitle": "Planejamento Financeiro",
+        "options": [
+            {"icon": file_dollar_icon, "label": "Investimentos"},
+            {"icon": briefcase_icon, "label": "Patrimônios"},
+            {"icon": sliders_icon, "label": "Receitas e Despesas"},
+            {"icon": rocket_icon, "label": "Construção do Futuro"},
+        ],
+    },
+    "fe": {
+        "dialog_title": "Barroca Pessoal",
+        "subtitle": "Fé",
+        "options": [
+            {"icon": file_text_icon, "label": "Estudo"},
+            {"icon": tools_icon, "label": "Prática"},
+            {"icon": link_icon, "label": "Internet"},
+        ],
+    },
+    "ferias_lazer": {
+        "dialog_title": "Barroca Pessoal",
+        "subtitle": "Férias e Lazer",
+        "options": [
+            {"icon": calendar_icon, "label": "Viagens"},
+            {"icon": layers_icon, "label": "Planos"},
+        ],
+    },
+    "saude_qualidade": {
+        "dialog_title": "Barroca Pessoal",
+        "subtitle": "Saúde e Qualidade de Vida",
+        "sections": [
+            {
+                "title": "Saúde Física",
+                "options": [
+                    {"icon": sliders_icon, "label": "Peso"},
+                    {"icon": tools_icon, "label": "Força"},
+                    {"icon": repeat_icon, "label": "Cardio"},
+                ],
+            },
+            {
+                "title": "Saúde Mental",
+                "options": [
+                    {"icon": shield_icon, "label": "Terapia"},
+                    {"icon": file_text_icon, "label": "Estudos"},
+                ],
+            },
+        ],
+    },
 }
 
 def render_barroca_modal(config):
-    # Título interno do conteúdo do modal deve ser o título específico da opção
     header_html = (
         f'<div class="modal-header-row">'
         f'<div class="modal-title-text">{config.get("subtitle", "")}</div>'
         f'</div>'
     )
 
-    options_html = ""
-    for opt in config["options"]:
-        # Links ainda não prontos: href="#" e sem target
-        options_html += (
-            f'<a class="modal-btn" role="button" href="#">{opt["icon"]}'
-            f'<span class="modal-btn-text">{opt["label"]}</span></a>'
-        )
+    if "sections" in config:
+        sections_html_parts = []
+        for idx, section in enumerate(config["sections"]):
+            section_options_html = ""
+            for opt in section.get("options", []):
+                section_options_html += (
+                    f'<a class="modal-btn" role="button" href="#">{opt["icon"]}'
+                    f'<span class="modal-btn-text">{opt["label"]}</span></a>'
+                )
+            section_html = (
+                f'<div class="modal-section">'
+                f'<div class="modal-section-title">{section.get("title", "")}</div>'
+                f'<div class="modal-section-options">{section_options_html}</div>'
+                f'</div>'
+            )
+            sections_html_parts.append(section_html)
+            if idx < len(config["sections"]) - 1:
+                sections_html_parts.append('<div class="modal-section-divider"></div>')
+        body_html = "".join(sections_html_parts)
+    else:
+        options_html = ""
+        for opt in config.get("options", []):
+            options_html += (
+                f'<a class="modal-btn" role="button" href="#">{opt["icon"]}'
+                f'<span class="modal-btn-text">{opt["label"]}</span></a>'
+            )
+        body_html = options_html
 
     full_html = (
         f'<div class="custom-modal-content">'
         f'{header_html}'
         f'<div class="modal-subtitle">Selecione uma das opções abaixo:</div>'
-        f'<div class="modal-options-container">{options_html}</div>'
+        f'<div class="modal-options-container">{body_html}</div>'
         f'</div>'
     )
 
@@ -583,6 +704,12 @@ button_to_modal = {
     "Escritório": "escritorio",
     "Cursos": "cursos",
     "Eduardo Uram": "eduardo_uram",
+    # Novos
+    "Estudos": "estudos",
+    "Planejamento Financeiro": "planejamento_financeiro",
+    "Fé": "fe",
+    "Férias e Lazer": "ferias_lazer",
+    "Saúde e Qualidade de Vida": "saude_qualidade",
 }
 
 # ==== Layout principal: 2 colunas ====

@@ -169,7 +169,7 @@ modal_configs = {
     "botafogo": {
         "title": "BOTAFOGO",
         "logo": "botafogo.png",
-        "dialog_title": "Treinos / Jogos e Compactos",
+        "dialog_title": "Modelo de Trabalho",
         "sections": [
             {
                 "title": "Ativações",
