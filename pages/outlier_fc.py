@@ -28,11 +28,11 @@ try:
     if "go" in query_params and query_params["go"] == "home":
         query_params.clear()
         try:
-            st.switch_page("app.py")
+            st.switch_page("pages/home.py")
         except Exception:
             st.markdown("""
             <script>
-            try { window.location.href = './'; } catch (e) {}
+            try { window.location.href = './home'; } catch (e) {}
             </script>
             """, unsafe_allow_html=True)
 except AttributeError:

@@ -49,12 +49,12 @@ try:
         # Limpa os parâmetros para evitar loops e tenta trocar de página
         query_params.clear()
         try:
-            st.switch_page("app.py")
+            st.switch_page("pages/home.py")
         except Exception:
             # Fallback seguro para recarregar a raiz relativa
             st.markdown("""
             <script>
-            try { window.location.href = './'; } catch (e) {}
+            try { window.location.href = './home'; } catch (e) {}
             </script>
             """, unsafe_allow_html=True)
 except AttributeError:
