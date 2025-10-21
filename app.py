@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+from auth import check_authentication
 
 # --- CONFIGURAÇÃO DA PÁGINA ---
 st.set_page_config(
@@ -7,6 +8,10 @@ st.set_page_config(
     page_icon="⚽️",
     layout="wide"
 )
+
+# --- VERIFICAÇÃO DE AUTENTICAÇÃO ---
+if not check_authentication():
+    st.stop()  # Para a execução se não estiver autenticado
 
 # --- CSS PARA OCULTAR ELEMENTOS NATIVOS DO STREAMLIT ---
 hide_streamlit_style = """
