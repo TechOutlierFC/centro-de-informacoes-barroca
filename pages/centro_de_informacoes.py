@@ -361,7 +361,7 @@ logo_sets = {
     "Modelo de Jogo": model_logos_files,
     "Adversários": ["crb.png", "avai.png"],
     "Treinos / Jogos e Compactos": training_logos_files,
-    "Modelo de Trabalho": ["avai.png", "botafogo.png", "plus_icon"],
+    "Modelo de Trabalho": ["avai.png", "botafogo.png", "crb.png", "plus_icon"],
     "Preleções": ["mirassol.png", "crb.png", "avai.png", "ceara.png", "coritiba.webp", "drive.png"],
     "Feedbacks": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp", "botafogo.png"],
     "Bastidores": ["crb.png", "avai.png"]
@@ -404,6 +404,7 @@ logo_link_overrides = {
     "Modelo de Trabalho": {
         "avai.png": "https://drive.google.com/drive/u/1/folders/1UU5oTJjI2EnHknmSfj0jhAtZ4zuYdBbg",
         "botafogo.png": "?modal=botafogo",
+        "crb.png": "https://drive.google.com/drive/folders/1bDq11_OIRemtkfYEt42JucLQvbmpN-hw?usp=sharing",
         "plus_icon": "/modelo_de_trabalho"
     }
 }
