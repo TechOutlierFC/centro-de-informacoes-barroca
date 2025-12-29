@@ -85,6 +85,16 @@ modal_configs = {
             {"icon": drive_icon, "label": "Série B - 2025", "link": "https://drive.google.com/drive/u/1/folders/1u9qMZEP4ZIKc27h0g1Bu5tvgUL4ZcZ5F"},
         ]
     },
+    "crb_training": {
+        "title": "CRB",
+        "logo": "crb.png",
+        "dialog_title": "Treinos / Jogos e Compactos",
+        "options": [
+            {"icon": youtube_icon, "label": "Compactos 12/25", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhq3sSbVWGGYqsWYm_qFG_ta"},
+            {"icon": youtube_icon, "label": "Treinos 12/2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpJe34qpyX56icNRyKHGkjP"},
+            {"icon": youtube_icon, "label": "Treinos 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqXG9P0xNWlNT6IUPU9KmOn"},
+        ]
+    },
     "mirassol": {
         "title": "MIRASSOL",
         "logo": "mirassol.png",
@@ -380,7 +390,7 @@ logo_link_overrides = {
         "botafogo.png": "?modal=botafogo_training",
         "corinthians.png": "https://drive.google.com/drive/u/1/folders/14sAmVS68jo7QNhLvR2flKTcLf7iNqrIL?hl=pt-br",
         "brasil.png": "https://drive.google.com/drive/u/1/folders/1G8yS3L5bP7toP2RjCl8nJycED7T7AkeR?hl=pt-br",
-        "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqXG9P0xNWlNT6IUPU9KmOn"
+        "crb.png": "?modal=crb_training"
     },
     "Preleções": {
         "mirassol.png": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHive6C_Mnty82kxH-z5ICy8",
