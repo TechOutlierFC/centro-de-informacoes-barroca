@@ -89,10 +89,29 @@ modal_configs = {
         "title": "CRB",
         "logo": "crb.png",
         "dialog_title": "Treinos / Jogos e Compactos",
-        "options": [
-            {"icon": youtube_icon, "label": "Compactos 12/25", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhq3sSbVWGGYqsWYm_qFG_ta"},
-            {"icon": youtube_icon, "label": "Treinos 12/2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpJe34qpyX56icNRyKHGkjP"},
-            {"icon": youtube_icon, "label": "Treinos 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqXG9P0xNWlNT6IUPU9KmOn"},
+        "sections": [
+            {
+                "title": "Treinos 2026",
+                "options": []
+            },
+            {
+                "title": "Compactos / Materiais de TV 2026",
+                "options": []
+            },
+            {
+                "title": "Desenvolvimento Tático Individual",
+                "options": [
+                    {"icon": drive_icon, "label": "Jogadores", "link": "https://drive.google.com/drive/folders/1nooUrJfsZc56ytbZUG4qTxnRaEkzU7Aj?usp=drive_link"},
+                ]
+            },
+            {
+                "title": "Treinos 2025",
+                "options": [
+                    {"icon": youtube_icon, "label": "Treinos 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqXG9P0xNWlNT6IUPU9KmOn"},
+                    {"icon": youtube_icon, "label": "Treinos 12/2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpJe34qpyX56icNRyKHGkjP"},
+                    {"icon": youtube_icon, "label": "Compactos 12/2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhq3sSbVWGGYqsWYm_qFG_ta"},
+                ]
+            }
         ]
     },
     "mirassol": {
@@ -568,7 +587,7 @@ st.markdown(
         color: #202020 !important;
         padding: 10px 20px;
         border-radius: 15px;
-        text-align: left;
+        text-align: center;
         font-size: 18px;
         font-family: 'Anton', sans-serif !important;
         font-weight: 400;
@@ -580,7 +599,7 @@ st.markdown(
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         width: 100%;
         height: 72px;
         text-decoration: none !important;
