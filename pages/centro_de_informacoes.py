@@ -85,6 +85,15 @@ modal_configs = {
             {"icon": drive_icon, "label": "Série B - 2025", "link": "https://drive.google.com/drive/u/1/folders/1u9qMZEP4ZIKc27h0g1Bu5tvgUL4ZcZ5F"},
         ]
     },
+    "crb_modelo_jogo": {
+        "title": "CRB",
+        "logo": "crb.png",
+        "dialog_title": "Modelo de Jogo",
+        "options": [
+            {"icon": youtube_icon, "label": "Modelo de Jogo Apresentação 2026", "link": "https://drive.google.com/file/d/1zf0VSKQne6Mv97fAIjxGbBZMqVCS9LJs/view?usp=sharing"},
+            {"icon": youtube_icon, "label": "Modelo de Jogo 03/06/2025", "link": "https://drive.google.com/file/d/1iiHDqamKfmnfo6DI3-FNobaNRaBMZie6/view"},
+        ]
+    },
     "crb_training": {
         "title": "CRB",
         "logo": "crb.png",
@@ -397,6 +406,9 @@ logo_sets = {
 }
 
 logo_link_overrides = {
+    "Modelo de Jogo": {
+        "crb.png": "?modal=crb_modelo_jogo",
+    },
     "Adversários": {
         "crb.png": "?modal=crb_adversarios",
         "avai.png": "https://drive.google.com/drive/u/1/folders/1SHbQVTQVOAjF8Z65sujbBxDt-qV1zOXw",
