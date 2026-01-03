@@ -101,11 +101,15 @@ modal_configs = {
         "sections": [
             {
                 "title": "Treinos 2026",
-                "options": []
+                "options": [
+                    {"icon": youtube_icon, "label": "Treinos 01/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhoHtVNkLQE1P2FIWabcuqdp"},
+                ]
             },
             {
                 "title": "Compactos / Materiais de TV 2026",
-                "options": []
+                "options": [
+                    {"icon": youtube_icon, "label": "Compactos 01/26", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpNGWIOJ1LZs6ptqHPkTq5Q"},
+                ]
             },
             {
                 "title": "Desenvolvimento Tático Individual",
@@ -162,6 +166,16 @@ modal_configs = {
         "options": [
             {"icon": youtube_icon, "label": "Apresentações - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_v2h7NPr4xvPpDG9cSNGtK"},
             {"icon": drive_icon, "label": "Série B - 2024", "link": "https://drive.google.com/drive/u/1/folders/1ztxV3fJvJeZZ1wlZZS9AHr_UBpOjiinh"},
+        ]
+    },
+    "crb_bastidores": {
+        "title": "CRB",
+        "logo": "crb.png",
+        "dialog_title": "Bastidores",
+        "options": [
+            {"icon": drive_icon, "label": "Apresentações 2026", "link": "https://drive.google.com/drive/folders/1kwnXEQ_BWIpdJS7EmTEIHt-H3AnM636z?usp=drive_link"},
+            {"icon": youtube_icon, "label": "Bastidores 2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhp-hahbTj3iAhphCMcdqsVZ"},
+            {"icon": youtube_icon, "label": "Bastidores 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ"},
         ]
     },
     "mirassol_feedbacks": {
@@ -439,7 +453,7 @@ logo_link_overrides = {
         "botafogo.png": "?modal=botafogo_feedbacks"
     },
     "Bastidores": {
-        "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ",
+        "crb.png": "?modal=crb_bastidores",
         "avai.png": "?modal=avai_bastidores"
     },
     "Modelo de Trabalho": {
