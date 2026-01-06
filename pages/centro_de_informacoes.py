@@ -154,7 +154,7 @@ modal_configs = {
             {"icon": youtube_icon, "label": "Treinos Abril - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_k2uSPD9FLqUVDs3OOyZ0B"},
             {"icon": youtube_icon, "label": "Treinos Maio - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_ODB4yPRJcicxQ0uIP-bW4"},
             {"icon": youtube_icon, "label": "Treinos Junho - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-Wp6oCkcJwRbJTQtlLBUmC"},
-            {"icon": youtube_icon, "label": "Desenvolvimento Individual - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-Wp6oCkcJwRbJTQtlLBUmC"},
+            {"icon": youtube_icon, "label": "Treinos Não Relacionados - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-Wp6oCkcJwRbJTQtlLBUmC"},
             {"icon": youtube_icon, "label": "Intercorrências / Lesões - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_wwlk6dHkTkM1-pkdwV-sk"},
             {"icon": youtube_icon, "label": "TV - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_WDJNfookf4KPg3yFLlM1V"},
         ]
