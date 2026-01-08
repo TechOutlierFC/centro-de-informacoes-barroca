@@ -416,7 +416,7 @@ logo_sets = {
     "Modelo de Trabalho": ["avai.png", "botafogo.png", "crb.png", "plus_icon"],
     "Preleções": ["mirassol.png", "crb.png", "avai.png", "ceara.png", "coritiba.webp", "drive.png"],
     "Feedbacks": ["mirassol.png", "crb.png", "avai.png", "coritiba.webp", "botafogo.png"],
-    "Bastidores": ["crb.png", "avai.png"]
+    "Bastidores": ["crb.png", "avai.png", "mirassol.png"]
 }
 
 logo_link_overrides = {
@@ -438,7 +438,7 @@ logo_link_overrides = {
         "crb.png": "?modal=crb_training"
     },
     "Preleções": {
-        "mirassol.png": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHive6C_Mnty82kxH-z5ICy8",
+        "mirassol.png": "https://drive.google.com/drive/folders/1xG8Bbm2EypoWLFEee7u_vda9F22iQzGg",
         "crb.png": "https://drive.google.com/drive/folders/1Z8otxolgB7sZicz_c2owOHiKw9936ANS",
         "avai.png": "https://drive.google.com/drive/u/1/folders/1wtrLLTRlQh-t37YKNROV_8RTobhAxT8-",
         "ceara.png": "https://drive.google.com/drive/u/1/folders/13hqM9vrHGIICq-yQZREjMmJ3pq7HrJNO",
@@ -454,7 +454,8 @@ logo_link_overrides = {
     },
     "Bastidores": {
         "crb.png": "?modal=crb_bastidores",
-        "avai.png": "?modal=avai_bastidores"
+        "avai.png": "?modal=avai_bastidores",
+        "mirassol.png": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHive6C_Mnty82kxH-z5ICy8"
     },
     "Modelo de Trabalho": {
         "avai.png": "https://drive.google.com/drive/u/1/folders/1UU5oTJjI2EnHknmSfj0jhAtZ4zuYdBbg",
