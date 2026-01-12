@@ -81,6 +81,7 @@ modal_configs = {
         "logo": "crb.png",
         "dialog_title": "Adversários",
         "options": [
+            {"icon": drive_icon, "label": "Alagoano - 2026", "link": "https://drive.google.com/drive/u/1/folders/18ssDHCQYJutfGid2x6FQyap688kwrfSQ"},
             {"icon": youtube_icon, "label": "Vídeos Adversários - 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhrWq-70HNRvDhNYRj1JT6de"},
             {"icon": drive_icon, "label": "Série B - 2025", "link": "https://drive.google.com/drive/u/1/folders/1u9qMZEP4ZIKc27h0g1Bu5tvgUL4ZcZ5F"},
         ]
@@ -176,6 +177,15 @@ modal_configs = {
             {"icon": drive_icon, "label": "Apresentações 2026", "link": "https://drive.google.com/drive/folders/1kwnXEQ_BWIpdJS7EmTEIHt-H3AnM636z?usp=drive_link"},
             {"icon": youtube_icon, "label": "Bastidores 2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhp-hahbTj3iAhphCMcdqsVZ"},
             {"icon": youtube_icon, "label": "Bastidores 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ"},
+        ]
+    },
+    "crb_prelecoes": {
+        "title": "CRB",
+        "logo": "crb.png",
+        "dialog_title": "Preleções",
+        "options": [
+            {"icon": drive_icon, "label": "Alagoano - 2026", "link": "https://drive.google.com/drive/u/1/folders/14zc0DLaI83iS8Q4_TNPWPfMWK-jVeiwR"},
+            {"icon": drive_icon, "label": "2025", "link": "https://drive.google.com/drive/folders/1Z8otxolgB7sZicz_c2owOHiKw9936ANS"},
         ]
     },
     "mirassol_feedbacks": {
@@ -439,7 +449,7 @@ logo_link_overrides = {
     },
     "Preleções": {
         "mirassol.png": "https://drive.google.com/drive/folders/1xG8Bbm2EypoWLFEee7u_vda9F22iQzGg",
-        "crb.png": "https://drive.google.com/drive/folders/1Z8otxolgB7sZicz_c2owOHiKw9936ANS",
+        "crb.png": "?modal=crb_prelecoes",
         "avai.png": "https://drive.google.com/drive/u/1/folders/1wtrLLTRlQh-t37YKNROV_8RTobhAxT8-",
         "ceara.png": "https://drive.google.com/drive/u/1/folders/13hqM9vrHGIICq-yQZREjMmJ3pq7HrJNO",
         "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1_3mQW0w1eEPUEEsJXhKfeSG2iFXiHHCp",
