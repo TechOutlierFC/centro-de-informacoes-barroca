@@ -264,6 +264,15 @@ modal_configs = {
                 ]
             }
         ]
+    },
+    "crb_feedbacks": {
+        "title": "CRB",
+        "logo": "crb.png",
+        "dialog_title": "Feedbacks",
+        "options": [
+            {"icon": youtube_icon, "label": "Feedbacks 2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhol-yr3Z9LPXCMAVbn1wyrE"},
+            {"icon": youtube_icon, "label": "Feedbacks 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqmM-UjXstIKW_mf9OXSMSG"},
+        ]
     }
 }
 
@@ -457,7 +466,7 @@ logo_link_overrides = {
     },
     "Feedbacks": {
         "mirassol.png": "?modal=mirassol_feedbacks",
-        "crb.png": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqmM-UjXstIKW_mf9OXSMSG",
+        "crb.png": "?modal=crb_feedbacks",
         "avai.png": "?modal=avai_feedbacks",
         "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1yHIKCWD8IhaRTc8An_EI7xOv5Zm5jtkr",
         "botafogo.png": "?modal=botafogo_feedbacks"
