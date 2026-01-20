@@ -1123,7 +1123,7 @@ with content_col:
                         label=f'{icon} {folder}',
                         on_click=lambda s=folder: set_or_toggle_logos(s),
                         key=f"folder_{folder}",
-                        use_container_width=True
+                        width='stretch'
                     )
                     if is_active:
                         st.markdown('<div class="desktop-only active-folder-underline"></div>', unsafe_allow_html=True)
@@ -1135,7 +1135,7 @@ with content_col:
                             label=f'{icon} {folder}',
                             on_click=lambda s=folder: set_or_toggle_logos(s),
                             key=f"folder_{folder}",
-                            use_container_width=True
+                            width='stretch'
                         )
                         if is_active:
                             st.markdown('<div class="desktop-only active-folder-underline"></div>', unsafe_allow_html=True)
@@ -1155,7 +1155,7 @@ with content_col:
                         label=f'{icon} {folder}',
                         on_click=hide_logos,
                         key=f"folder_{folder}",
-                        use_container_width=True
+                        width='stretch'
                     )
 
                 # Placeholder mobile (logo abaixo do botão)

@@ -420,7 +420,7 @@ with col_pie:
     with pie_box:
         st.markdown("<div class='viz-title' style='padding-left: 5px;'>Aproveitamento</div>", unsafe_allow_html=True)
         st.markdown('<div id="pie-box"></div>', unsafe_allow_html=True)
-        st.altair_chart(chart_pie, use_container_width=True)
+        st.altair_chart(chart_pie, width='stretch')
 
 
 # Gols feitos x sofridos por faixa de minutagem
@@ -475,7 +475,7 @@ with col_bars:
     with bars_box:
         st.markdown("<div class='viz-title' style='padding-left: 5px;'>Gols feitos e sofridos — por intervalo de tempo</div>", unsafe_allow_html=True)
         st.markdown('<div id="bars-box"></div>', unsafe_allow_html=True)
-        st.altair_chart(chart_gols, use_container_width=False)
+        st.altair_chart(chart_gols, width='content')
 
 # ===== Bloco: Métricas por intervalo de tempo (ocupando largura total) =====
 metrics_box = st.container(border=True)
@@ -540,8 +540,16 @@ with metrics_box:
         "Lançamentos certos": "...101",
     }
 
-    # Apenas métricas existentes no dataset
-    available_labels = [label for label, col in metric_label_to_col.items() if col in df.columns]
+    # Apenas métricas existentes no dataset E que têm dados válidos (não apenas NaN/vazios)
+    available_labels = []
+    for label, col in metric_label_to_col.items():
+        if col in df.columns:
+            # Verifica se há pelo menos um valor não-nulo na coluna para partidas filtradas
+            # Considera tanto dados do cliente quanto dos adversários nas partidas permitidas
+            relevant_data = df[df["Data"].isin(allowed_dates)][col]
+            if relevant_data.notna().any() and (pd.to_numeric(relevant_data, errors="coerce").notna().any()):
+                available_labels.append(label)
+    
     available_labels = sorted(available_labels)
     default_label = available_labels[0] if available_labels else None
     with header_cols[1]:
@@ -549,15 +557,18 @@ with metrics_box:
         with lab_col:
             st.markdown("<div style='padding-top:8px'>Métrica</div>", unsafe_allow_html=True)
         with input_col:
-            sel_metric_label = st.selectbox(
-                "Métrica",
-                available_labels,
-                index=0,
-                label_visibility="collapsed",
-            )
+            if available_labels:
+                sel_metric_label = st.selectbox(
+                    "Métrica",
+                    available_labels,
+                    index=0,
+                    label_visibility="collapsed",
+                )
+            else:
+                sel_metric_label = None
 
-    if not available_labels:
-        st.info("Nenhuma métrica disponível no arquivo de dados.")
+    if not available_labels or sel_metric_label is None:
+        st.info("Nenhuma métrica qualitativa disponível no arquivo de dados para as partidas filtradas. Algumas partidas podem não ter dados qualitativos.")
     else:
         # Se usuário deixar "Todas", exibimos a primeira métrica disponível como padrão
         effective_metric_label = sel_metric_label
@@ -567,6 +578,8 @@ with metrics_box:
         # Cliente (Barroca)
         client_metric_df = client_final[["Minutagem", metric_col]].copy()
         client_metric_df[metric_col] = pd.to_numeric(client_metric_df[metric_col], errors="coerce")
+        # Remove linhas onde a métrica é NaN (partidas sem dados qualitativos)
+        client_metric_df = client_metric_df[client_metric_df[metric_col].notna()]
         client_metric_avg = (
             client_metric_df.groupby("Minutagem", as_index=False)[metric_col].mean()
             .rename(columns={metric_col: "Valor"})
@@ -579,6 +592,8 @@ with metrics_box:
         opponents_df = df[(df["OUTLIER"] != "Barroca") & (df["Data"].isin(allowed_dates))].copy()
         opp_metric_df = opponents_df[["Minutagem", metric_col]].copy()
         opp_metric_df[metric_col] = pd.to_numeric(opp_metric_df[metric_col], errors="coerce")
+        # Remove linhas onde a métrica é NaN (partidas sem dados qualitativos)
+        opp_metric_df = opp_metric_df[opp_metric_df[metric_col].notna()]
         opp_metric_avg = (
             opp_metric_df.groupby("Minutagem", as_index=False)[metric_col].mean()
             .rename(columns={metric_col: "Valor"})
@@ -589,29 +604,33 @@ with metrics_box:
 
         metrics_long = pd.concat([client_metric_avg, opp_metric_avg], ignore_index=True)
 
-        # Gráfico de linhas
-        line_chart = (
-            alt.Chart(metrics_long)
-            .mark_line(point=True)
-            .encode(
-                x=alt.X("Minutagem:N", sort=order_min, title=None, axis=alt.Axis(labelAngle=0)),
-                y=alt.Y("Valor:Q", title=effective_metric_label),
-                color=alt.Color(
-                    "Lado:N",
-                    scale=alt.Scale(domain=["Barroca", "Adversários"], range=["#2ecc71", "#e74c3c"]),
-                    legend=alt.Legend(title="", orient="top", direction="horizontal", padding=0),
-                ),
-                tooltip=["Minutagem:N", "Lado:N", alt.Tooltip("Valor:Q", title=effective_metric_label, format=".2f")],
+        # Verifica se há dados para exibir
+        if metrics_long.empty or metrics_long["Valor"].isna().all():
+            st.info(f"Nenhum dado disponível para a métrica '{effective_metric_label}' nas partidas filtradas.")
+        else:
+            # Gráfico de linhas
+            line_chart = (
+                alt.Chart(metrics_long)
+                .mark_line(point=True)
+                .encode(
+                    x=alt.X("Minutagem:N", sort=order_min, title=None, axis=alt.Axis(labelAngle=0)),
+                    y=alt.Y("Valor:Q", title=effective_metric_label),
+                    color=alt.Color(
+                        "Lado:N",
+                        scale=alt.Scale(domain=["Barroca", "Adversários"], range=["#2ecc71", "#e74c3c"]),
+                        legend=alt.Legend(title="", orient="top", direction="horizontal", padding=0),
+                    ),
+                    tooltip=["Minutagem:N", "Lado:N", alt.Tooltip("Valor:Q", title=effective_metric_label, format=".2f")],
+                )
             )
-        )
 
-        chart_metrics = (
-            line_chart
-            .properties(height=260, padding={"bottom": 0, "top": 0, "left": 10, "right": 10})
-            .configure_view(stroke=None)
-        )
+            chart_metrics = (
+                line_chart
+                .properties(height=260, padding={"bottom": 0, "top": 0, "left": 10, "right": 10})
+                .configure_view(stroke=None)
+            )
 
-        st.altair_chart(chart_metrics, use_container_width=True)
+            st.altair_chart(chart_metrics, width='stretch')
 
 st.markdown('</div>', unsafe_allow_html=True)
 
