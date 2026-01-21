@@ -1,3 +1,4 @@
 pandas
 streamlit
 streamlit-authenticator
+altair<5
