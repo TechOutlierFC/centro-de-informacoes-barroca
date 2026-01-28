@@ -18,11 +18,14 @@ def get_logo_html(filename, class_name="logo-img", link="#"):
     # Tratamento especial para o ícone de "+"
     if filename == "plus_icon":
         target = "_self" if link.startswith("?") or link.startswith("/") else "_blank"
-        return f'''<a href="{link}" target="{target}" class="{class_name}" style="display: inline-block; width: 85px; height: 85px; background-color: #FFA500; border-radius: 50%; text-align: center; line-height: 85px; font-size: 24px; font-weight: bold; color: white; text-decoration: none; transition: transform 0.2s ease-in-out; font-family: 'Anton', sans-serif;">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 5v14M5 12h14"></path>
-            </svg>
-        </a>'''
+        return f'''<div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+            <a href="{link}" target="{target}" class="{class_name}" style="display: inline-block; width: 85px; height: 85px; background-color: #FFA500; border-radius: 50%; text-align: center; line-height: 85px; font-size: 24px; font-weight: bold; color: white; text-decoration: none; transition: transform 0.2s ease-in-out; font-family: 'Anton', sans-serif;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M5 12h14"></path>
+                </svg>
+            </a>
+            <span style="font-family: 'Anton', sans-serif; font-size: 11px; color: #555; text-align: center; max-width: 100px; line-height: 1.2; text-transform: uppercase;">Referência de treinos externos e autorais</span>
+        </div>'''
 
     logo_path = LOGO_DIR / filename
     ext = logo_path.suffix.strip('.')
@@ -694,6 +697,19 @@ st.markdown(
       .logo-item:hover {{
         transform: scale(1.1);
       }}
+      /* Estilo específico para o wrapper do plus_icon */
+      .logo-item > div {{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }}
+      .logo-item > div > a {{
+        transition: transform 0.2s ease-in-out;
+      }}
+      .logo-item > div:hover > a {{
+        transform: scale(1.1);
+      }}
       .drive-logo-prelecoes {{
         height: 70px; /* Altura reduzida para o logo do Drive */
       }}
@@ -999,6 +1015,11 @@ st.markdown(
         }}
         .logo-item {{ height: 56px; }}
         .drive-logo-prelecoes {{ height: 52px; }}
+        /* Ajuste do texto do plus_icon no mobile */
+        .logo-item > div > span {{
+          font-size: 9px;
+          max-width: 80px;
+        }}
 
         /* Alinhar logos inline à mesma largura do botão */
         .inline-logos-wrapper .logo-bar-container {{
