@@ -106,6 +106,7 @@ modal_configs = {
             {
                 "title": "Treinos 2026",
                 "options": [
+                    {"icon": youtube_icon, "label": "Treinos 02/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMho1GmRpwLEUsBMCG0CQPQw7"},
                     {"icon": youtube_icon, "label": "Treinos 01/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhoHtVNkLQE1P2FIWabcuqdp"},
                 ]
             },
