@@ -84,9 +84,9 @@ modal_configs = {
         "logo": "crb.png",
         "dialog_title": "Adversários",
         "options": [
-            {"icon": drive_icon, "label": "Alagoano - 2026", "link": "https://drive.google.com/drive/u/1/folders/18ssDHCQYJutfGid2x6FQyap688kwrfSQ"},
+            {"icon": drive_icon, "label": "Alagoano - 2026", "link": "https://drive.google.com/drive/u/7/folders/1GLd9kpdlHX82NSwtbmPSnZTi6ZvJyPlN"},
             {"icon": youtube_icon, "label": "Vídeos Adversários - 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhrWq-70HNRvDhNYRj1JT6de"},
-            {"icon": drive_icon, "label": "Série B - 2025", "link": "https://drive.google.com/drive/u/1/folders/1u9qMZEP4ZIKc27h0g1Bu5tvgUL4ZcZ5F"},
+            {"icon": drive_icon, "label": "Série B - 2025", "link": "https://drive.google.com/drive/u/7/folders/1AHu2Pqh3DTRy-5vq1fyiL4v7YF3qHgeP"},
         ]
     },
     "crb_modelo_jogo": {
@@ -94,8 +94,8 @@ modal_configs = {
         "logo": "crb.png",
         "dialog_title": "Modelo de Jogo",
         "options": [
-            {"icon": youtube_icon, "label": "Modelo de Jogo Apresentação 2026", "link": "https://drive.google.com/file/d/1zf0VSKQne6Mv97fAIjxGbBZMqVCS9LJs/view?usp=sharing"},
-            {"icon": youtube_icon, "label": "Modelo de Jogo 03/06/2025", "link": "https://drive.google.com/file/d/1iiHDqamKfmnfo6DI3-FNobaNRaBMZie6/view"},
+            {"icon": youtube_icon, "label": "Modelo de Jogo Apresentação 2026", "link": "https://drive.google.com/file/d/1Gq6N2hYofR5SB3JYDnv6iG6N6VAu46KN/view"},
+            {"icon": youtube_icon, "label": "Modelo de Jogo 03/06/2025", "link": "http://drive.google.com/file/d/1oFD-O7XCuK74O7NntbAeYbALC-CvHKwZ/view"},
         ]
     },
     "crb_training": {
@@ -119,7 +119,7 @@ modal_configs = {
             {
                 "title": "Desenvolvimento Tático Individual",
                 "options": [
-                    {"icon": drive_icon, "label": "Jogadores", "link": "https://drive.google.com/drive/folders/1nooUrJfsZc56ytbZUG4qTxnRaEkzU7Aj?usp=drive_link"},
+                    {"icon": drive_icon, "label": "Jogadores", "link": "https://drive.google.com/drive/u/7/folders/14nNTARY7y5eGh624FvCr0t8RfayaRRbz"},
                 ]
             },
             {
@@ -139,8 +139,8 @@ modal_configs = {
         "options": [
             {"icon": youtube_icon, "label": "Treinamentos", "link": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHgfUi6bRCwuVt5jCS68my3M"},
             {"icon": youtube_icon, "label": "Resumo", "link": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHi55ZWKRTf9hHrJUOhcJWYE"},
-            {"icon": drive_icon, "label": "ProSoccer", "link": "https://drive.google.com/drive/folders/1y6OSjIA7ggzcrLSJaTPvplBdop2x39iD"},
-            {"icon": drive_icon, "label": "Desenvolvimento Individual", "link": "https://drive.google.com/drive/u/1/folders/1UrFKAF0s8HKAirV0sXjZmB9uAw5YN3G2?hl=pt-br"},
+            {"icon": drive_icon, "label": "ProSoccer", "link": "https://drive.google.com/drive/u/7/folders/1gLpIf0FC9H66aS2Z9gwPdwgaX64U1XwM"},
+            {"icon": drive_icon, "label": "Desenvolvimento Individual", "link": "https://drive.google.com/drive/u/7/folders/1OkkOHwvwNVUF2bF4bHf2oe-ky4tYIqhn"},
         ]
     },
     "avai": {
@@ -148,7 +148,7 @@ modal_configs = {
         "logo": "avai.png",
         "dialog_title": "Treinos / Jogos e Compactos",
         "options": [
-            {"icon": drive_icon, "label": "Treinamentos", "link": "https://drive.google.com/drive/u/1/folders/1dzMCut0Wbt-Mqy0K_NUaS4EJP0_FGl6H?hl=pt-br"},
+            {"icon": drive_icon, "label": "Treinamentos", "link": "https://drive.google.com/drive/u/7/folders/1eTpbV02bgdLCWzFFH1eXZV1kJvkgN-g-"},
             {"icon": youtube_icon, "label": "Jogos Série B - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW9NQ0M06fy30nW_v4muAfYV"},
             {"icon": youtube_icon, "label": "Jogos Catarinense - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-rvLi0FR8ukfBpx21xxCNM"},
             {"icon": youtube_icon, "label": "Compactos Série B - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW9LB18AHWXq0zFPLuYOF-o-"},
@@ -170,7 +170,7 @@ modal_configs = {
         "dialog_title": "Bastidores",
         "options": [
             {"icon": youtube_icon, "label": "Apresentações - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW_v2h7NPr4xvPpDG9cSNGtK"},
-            {"icon": drive_icon, "label": "Série B - 2024", "link": "https://drive.google.com/drive/u/1/folders/1ztxV3fJvJeZZ1wlZZS9AHr_UBpOjiinh"},
+            {"icon": drive_icon, "label": "Série B - 2024", "link": "https://drive.google.com/drive/u/7/folders/1V5rr51eLoWOLPi3NYkrGWxmsaY-UOKvc"},
         ]
     },
     "crb_bastidores": {
@@ -178,7 +178,7 @@ modal_configs = {
         "logo": "crb.png",
         "dialog_title": "Bastidores",
         "options": [
-            {"icon": drive_icon, "label": "Apresentações 2026", "link": "https://drive.google.com/drive/folders/1kwnXEQ_BWIpdJS7EmTEIHt-H3AnM636z?usp=drive_link"},
+            {"icon": drive_icon, "label": "Apresentações 2026", "link": "https://drive.google.com/drive/u/7/folders/1YZueLHSZFpFdHh-FtpuANI6hAnSJ-yNQ"},
             {"icon": youtube_icon, "label": "Bastidores 2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhp-hahbTj3iAhphCMcdqsVZ"},
             {"icon": youtube_icon, "label": "Bastidores 2025", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpdXbKMGBU7JLtMGkk9fOkQ"},
         ]
@@ -188,8 +188,8 @@ modal_configs = {
         "logo": "crb.png",
         "dialog_title": "Preleções",
         "options": [
-            {"icon": drive_icon, "label": "Alagoano - 2026", "link": "https://drive.google.com/drive/u/1/folders/14zc0DLaI83iS8Q4_TNPWPfMWK-jVeiwR"},
-            {"icon": drive_icon, "label": "2025", "link": "https://drive.google.com/drive/folders/1Z8otxolgB7sZicz_c2owOHiKw9936ANS"},
+            {"icon": drive_icon, "label": "Alagoano - 2026", "link": "https://drive.google.com/drive/u/7/folders/153tP4JTRjCJe_LIOIy3P0rexFdrEdjKT"},
+            {"icon": drive_icon, "label": "2025", "link": "https://drive.google.com/drive/u/7/folders/1lXsAB-opp_40vIqUII7mmqz1lv5H12-O"},
         ]
     },
     "mirassol_feedbacks": {
@@ -198,7 +198,7 @@ modal_configs = {
         "dialog_title": "Feedbacks",
         "options": [
             {"icon": youtube_icon, "label": "Feedbacks Profissional - 2025", "link": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHgraumM8hYKDByMOKCOfGIR"},
-            {"icon": drive_icon, "label": "Estudo OutlierFC", "link": "https://drive.google.com/drive/u/1/folders/1E5bkfK5FfFkFQfjrhaP9facCmVrdjffd?hl=pt-br"},
+            {"icon": drive_icon, "label": "Estudo OutlierFC", "link": "https://drive.google.com/drive/u/7/folders/12RP_0XydPW6YuoQu11Il4-_obdWP_X6v"},
         ]
     },
     "avai_feedbacks": {
@@ -208,9 +208,9 @@ modal_configs = {
         "options": [
             {"icon": youtube_icon, "label": "Pós-Jogo Série B - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW9tEgrPuWh5KT5d9ZN7OIxo"},
             {"icon": youtube_icon, "label": "Pós-Jogo Catarinense", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-tfrnwYjuXdYDeNTBkkokx"},
-            {"icon": drive_icon, "label": "Relatórios Mensais - 2024", "link": "https://drive.google.com/drive/folders/1S5HAAsnYeyYMaqVSVML3f3SnzJp5poUE"},
-            {"icon": drive_icon, "label": "Estatísticas Série B - 2024", "link": "https://drive.google.com/drive/folders/1shwUfvzgQ9fy6p3ZxY1G6YRv2EijJeER"},
-            {"icon": drive_icon, "label": "Estatísticas Catarinense - 2024", "link": "https://drive.google.com/drive/folders/1W9CRbTjkrKZPfkidk1LHqMSqCM6k1vFz"},
+            {"icon": drive_icon, "label": "Relatórios Mensais - 2024", "link": "https://drive.google.com/drive/u/7/folders/1x4jbtfBgEaHIsqd3GtKIi_woBn_T4GTK"},
+            {"icon": drive_icon, "label": "Estatísticas Série B - 2024", "link": "https://drive.google.com/drive/u/7/folders/1H1ohtN9TWttXP69vqi39xoBEiE9VEzKk"},
+            {"icon": drive_icon, "label": "Estatísticas Catarinense - 2024", "link": "https://drive.google.com/drive/u/7/folders/1KrnA0EtTWaYkAWdYcPDJz3Ox7ZLFxc78"},
         ]
     },
     "botafogo_training": {
@@ -219,7 +219,7 @@ modal_configs = {
         "dialog_title": "Treinos / Jogos e Compactos",
         "options": [
             {"icon": youtube_icon, "label": "Resumos de Treino", "link": "https://www.youtube.com/playlist?list=PLHE5_tUyoOhMYO-vfxmki9gyFZhYbNgpS"},
-            {"icon": drive_icon, "label": "Resumos de Treino", "link": "https://drive.google.com/drive/u/1/folders/1dV8j9tHjuOwhKwlmkix-uowp5f3rk3WK?hl=pt-br"},
+            {"icon": drive_icon, "label": "Resumos de Treino", "link": "https://drive.google.com/drive/u/7/folders/110HhcSaRBdIVWGSXdlOlhXPcDDXPA22d"},
             {"icon": youtube_icon, "label": "Jogos Completos", "link": "https://www.youtube.com/watch?v=AWT59LSPr0w&ab_channel=BotafogoFRAnalise"},
         ]
     },
@@ -250,7 +250,7 @@ modal_configs = {
                 "options": [
                     {"icon": youtube_icon, "label": "Preparação em Rondos", "link": "https://youtube.com/playlist?list=PLHE5_tUyoOhMrlV4HmKyEklFHUuTwpRJa&feature=shared"},
                     {"icon": youtube_icon, "label": "Preparação Técnica", "link": "https://www.youtube.com/watch?v=vpFK9OcjbeM&ab_channel=BotafogoFRAnalise"},
-                    {"icon": drive_icon, "label": "Preparação em Confrontos", "link": "https://drive.google.com/drive/u/1/folders/153EWxlm1bsgXGrtea6Jhs9VbgLDkvK4n"}
+                    {"icon": drive_icon, "label": "Preparação em Confrontos", "link": "https://drive.google.com/drive/u/7/folders/1zdSdIecIko9iDLlQPSEHssfy7KWYxrWK"}
                 ]
             },
             {
@@ -364,10 +364,10 @@ folders = sorted(folder_icons.keys())
 
 folder_links = {
     "BARROCA 360°": "/barroca_360",
-    "Referências Externas": "https://drive.google.com/drive/u/1/folders/1MzFZ5sJv3Ox1Q9Foa0Q4fWEPiYymYv-D",
-    "Mercado e Banco de Dados": "https://drive.google.com/drive/u/1/folders/1er6TRhp4N4gB7nbo-XpxOv_2fadDpf2w",
-    "Clubes Alvo": "https://drive.google.com/drive/u/1/folders/19HOmXsn-ewfPaD5TBipojWCXu8c8a3_k",
-    "Referências OutlierFC": "https://drive.google.com/drive/u/1/folders/1G8EpSiV9yNHZlqV0v6PWtx2aXHOMhI83",
+    "Referências Externas": "https://drive.google.com/drive/u/7/folders/1AtGcMhV_qkE9-iidjAmVkKNHIWNMYy4e",
+    "Mercado e Banco de Dados": "https://drive.google.com/drive/u/7/folders/14-fuwiAC9lC3BIDc-sEivOIjNeXez_ax",
+    "Clubes Alvo": "https://drive.google.com/drive/u/7/folders/1NTWSAmR_4d-hz975kz319ilGYDH0DC-x",
+    "Referências OutlierFC": "https://drive.google.com/drive/u/7/folders/1n-9ioN5KM0eM5oHjfPiSi3hRkvoUtmdt",
     "Modelo de Trabalho": "/modelo_de_trabalho",
 }
 
@@ -409,12 +409,12 @@ work_model_logos_files = [
     "check.png",
 ]
 model_logo_links = {
-    "mirassol.png": "https://drive.google.com/file/d/1sAG41hCMiKccfndB08jQ8r6r0ubZAEIT/view",
+    "mirassol.png": "https://drive.google.com/file/d/17UpacA8XKAKOh0xwx2saSTyboQ_X08RC/view",
     "crb.png": "https://drive.google.com/file/d/1iiHDqamKfmnfo6DI3-FNobaNRaBMZie6/view",
-    "avai.png": "https://drive.google.com/file/d/14L690eI5qjkLePdTmpTpWDqbkDHq3ngk/view",
-    "ceara.png": "https://drive.google.com/file/d/109HbeTFwMJVNPnam4wn5keJBTFHm-j1F/view",
-    "vitoria.png": "https://drive.google.com/drive/u/1/folders/1zJcFNZ6Ai1x9TwsFN-ZwvA8rUYPFfh2f",
-    "coritiba.webp": "https://drive.google.com/file/d/1Nr_uBLAvJ4uCCFWfhxdTbg_lIkalfXs-/view",
+    "avai.png": "https://drive.google.com/file/d/1ort6drXQbEraMno_sQfAh7PGINsAiyPh/view",
+    "ceara.png": "https://drive.google.com/file/d/1nspBeJL7bSyWXQpELvK8P6Wq8MUI8MWJ/view",
+    "vitoria.png": "https://drive.google.com/drive/u/7/folders/1vh_r4vre8_bZB5kZNAf-JB5WF2P0FCY7",
+    "coritiba.webp": "https://drive.google.com/file/d/1LnUhgQN0NmjUbdjLlZbAtczStQ0eoyzr/view",
     "botafogo.png": "https://www.youtube.com/watch?v=jrPc_gdTRBc&ab_channel=BotafogoFRAnalise",
 }
 
@@ -448,31 +448,31 @@ logo_link_overrides = {
     },
     "Adversários": {
         "crb.png": "?modal=crb_adversarios",
-        "avai.png": "https://drive.google.com/drive/u/1/folders/1SHbQVTQVOAjF8Z65sujbBxDt-qV1zOXw",
+        "avai.png": "https://drive.google.com/drive/u/7/folders/1nUWAEKJbBzTY11xc69hO-ZwVI_3E93tX",
     },
     "Treinos / Jogos e Compactos": {
         "mirassol.png": "?modal=mirassol",
         "avai.png": "?modal=avai",
-        "vitoria.png": "https://drive.google.com/drive/u/1/folders/1ChLG6YEOAFG2reU8BKvnUFxL_KkwrDid?hl=pt-br",
-        "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1H7mn2PgIUHOlRJOxg0RFs_ricOpt1mdV?hl=pt-br",
+        "vitoria.png": "https://drive.google.com/drive/u/7/folders/1vZcHu84aI9ewx7R5UGNxgIFTjZfu8ZQU",
+        "coritiba.webp": "https://drive.google.com/drive/u/7/folders/17XBJxZ1NxOM6j2c4SIWsSXXRKJJXvS1v",
         "botafogo.png": "?modal=botafogo_training",
-        "corinthians.png": "https://drive.google.com/drive/u/1/folders/14sAmVS68jo7QNhLvR2flKTcLf7iNqrIL?hl=pt-br",
-        "brasil.png": "https://drive.google.com/drive/u/1/folders/1G8yS3L5bP7toP2RjCl8nJycED7T7AkeR?hl=pt-br",
+        "corinthians.png": "https://drive.google.com/drive/u/7/folders/1HRhYpGwq_38cEjl5tBzBZum5Peln_FrD",
+        "brasil.png": "https://drive.google.com/drive/u/7/folders/1sbMsy17dUKxSVCT4eI7hh0mDuXzj1xVt",
         "crb.png": "?modal=crb_training"
     },
     "Preleções": {
-        "mirassol.png": "https://drive.google.com/drive/folders/1xG8Bbm2EypoWLFEee7u_vda9F22iQzGg",
+        "mirassol.png": "https://drive.google.com/drive/u/7/folders/1-fFpTiCjP5qRn2HFEawq4PXJzYAKHxOU",
         "crb.png": "?modal=crb_prelecoes",
-        "avai.png": "https://drive.google.com/drive/u/1/folders/1wtrLLTRlQh-t37YKNROV_8RTobhAxT8-",
-        "ceara.png": "https://drive.google.com/drive/u/1/folders/13hqM9vrHGIICq-yQZREjMmJ3pq7HrJNO",
-        "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1_3mQW0w1eEPUEEsJXhKfeSG2iFXiHHCp",
-        "drive.png": "https://drive.google.com/drive/u/1/folders/1xG8Bbm2EypoWLFEee7u_vda9F22iQzGg"
+        "avai.png": "https://drive.google.com/drive/u/7/folders/12JO8aqpaVTbZe8TJQRV1vK5fu6tB2dfm",
+        "ceara.png": "https://drive.google.com/drive/u/7/folders/1yFolIpPMeD8i1waq52dI9cxEkwlcA7tX",
+        "coritiba.webp": "https://drive.google.com/drive/u/7/folders/1ZW2D7r0sSZu6FGlQL6P-579jsZkpBXIw",
+        "drive.png": "https://drive.google.com/drive/u/7/folders/1y5_JnjfzE_VgDtHjIiVY4rvSbXzI6e3k"
     },
     "Feedbacks": {
         "mirassol.png": "?modal=mirassol_feedbacks",
         "crb.png": "?modal=crb_feedbacks",
         "avai.png": "?modal=avai_feedbacks",
-        "coritiba.webp": "https://drive.google.com/drive/u/1/folders/1yHIKCWD8IhaRTc8An_EI7xOv5Zm5jtkr",
+        "coritiba.webp": "https://drive.google.com/drive/u/7/folders/11hGL9BNk_S86dXsodrsVCeTsdqpRGgUm",
         "botafogo.png": "?modal=botafogo_feedbacks"
     },
     "Bastidores": {
@@ -481,9 +481,9 @@ logo_link_overrides = {
         "mirassol.png": "https://www.youtube.com/playlist?list=PLgcT6qQPwPHive6C_Mnty82kxH-z5ICy8"
     },
     "Modelo de Trabalho": {
-        "avai.png": "https://drive.google.com/drive/u/1/folders/1UU5oTJjI2EnHknmSfj0jhAtZ4zuYdBbg",
+        "avai.png": "https://drive.google.com/drive/u/7/folders/1w67UBSjoqY71Kv0uwHlZUlxZbcXBb4n0",
         "botafogo.png": "?modal=botafogo",
-        "crb.png": "https://drive.google.com/drive/folders/1bDq11_OIRemtkfYEt42JucLQvbmpN-hw?usp=sharing",
+        "crb.png": "https://drive.google.com/drive/u/7/folders/18GUTqWUFek_gs5-_Cfl-ynvsZkURb54P",
         "plus_icon": "/modelo_de_trabalho"
     }
 }

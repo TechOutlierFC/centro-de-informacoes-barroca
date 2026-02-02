@@ -84,31 +84,31 @@ work_model_logos_files = [
 
 # Links (mesmos da seção original em Centro de Informações)
 external_logo_links = {
-    "ajax.png": "https://drive.google.com/drive/u/1/folders/1oD6D3bXOjuJ9l6Ub1-xTKtCP2yDhwlXu",
-    "bilbao.png": "https://drive.google.com/drive/u/1/folders/1B_TsMNUG7R4oIfjwquMbiVCCQEmPdtUJ",
-    "atletico_madrid.png": "https://drive.google.com/drive/u/1/folders/1YqfxUpfsG9cj-bKK61wrLBq4POOLTQa3",
-    "leverkusen.png": "https://drive.google.com/drive/u/1/folders/1s2L4-wc3RlRZEBoWbkSrRQDHqnZjuUlc",
-    "dortmund.png": "https://drive.google.com/drive/u/1/folders/1z-ApLoWgZ2YEKYcR8wLNIM9C8ysG5Qys",
-    "monchengladbach.png": "https://drive.google.com/drive/u/1/folders/1j3KDH_5HJAtdTvUgWQDGCINtylQD01Zd",
-    "chelsea.png": "https://drive.google.com/drive/u/1/folders/14xrFUZIgsXfPM0OuzLTdw3rDxrOOWRwN",
-    "brugge.png": "https://drive.google.com/drive/u/1/folders/1d7Tl8wZUUHJcHmFtfrtcB51TLo_A_fN3",
-    "crystal_palace.png": "https://drive.google.com/drive/u/1/folders/1rIeecrBHq-Gwhd3RqV5cCAccaB7WEI3w",
-    "everton.png": "https://drive.google.com/drive/u/1/folders/15q38rIw5ZaG1629GoVMfR7PtXA4-yHTf",
-    "barcelona.png": "https://drive.google.com/drive/u/1/folders/1vKw088JhgDQpOsBPcwwwnNXV6TnS1A_7",
-    "bayern.png": "https://drive.google.com/drive/u/1/folders/1BRYpF3uLrQdyY9fAlnAXkuGLxIziqfOo",
-    "schalke.png": "https://drive.google.com/drive/u/1/folders/1hQsJmx2yBVKfKKR9DtmwSA35Qh6rjd4t",
-    "mainz.png": "https://drive.google.com/drive/u/1/folders/1ie_bQ8Atr-cjOCDi3khoVU5ZzKi9PigU",
-    "hibernian.png": "https://drive.google.com/drive/u/1/folders/1FNqRUklzi3YV8xAtRaxbd6M0e_Esc-Dt",
-    "inter.png": "https://drive.google.com/drive/u/1/folders/1eWqQ6or_3RAzaYtjrXxmPM3atyUY8UyQ",
-    "liverpool.png": "https://drive.google.com/drive/u/1/folders/18-1zg-DaWqWjTGsclcqk7XvStl-l5_jD",
-    "mallorca.png": "https://drive.google.com/drive/u/1/folders/1_yWWVwNzRikp5xC0hElPJdqm1Ob21-4L",
-    "city.png": "https://drive.google.com/drive/u/1/folders/1db5Q6SLyhjMqBBy1B_5p5PVHOnkcQB40",
-    "napoli.png": "https://drive.google.com/drive/u/1/folders/1yZqkzkrll-jbRdBaWPrM19Ctupr0I6Tx",
-    "psg.png": "https://drive.google.com/drive/u/1/folders/1LmOv7srn2h-E_37zFLF45w_6D6peJKqX",
-    "leipzig.png": "https://drive.google.com/drive/u/1/folders/1EaXMf8NL8neRNECQV9YjHVV67FUxwl0j",
-    "stuttgart.png": "https://drive.google.com/drive/u/1/folders/1QUGlh47uM-6VwbvXOpPvDHjadhYfrKta",
-    "villarreal.png": "https://drive.google.com/drive/u/1/folders/10U-YB78Bqsny7cQ8iMFeb76ff41UzIh-",
-    "wolfsburg.png": "https://drive.google.com/drive/u/1/folders/1RznACZfDV30ew-4cLQsQnMDCxOK0ck7V",
+    "ajax.png": "https://drive.google.com/drive/u/7/folders/1XEQBTl-lrc29ycV75jmZU2kqUC4tykw9",
+    "bilbao.png": "https://drive.google.com/drive/u/7/folders/15lJN7pKisilMm3RxqdRwHtEfqmPQ6Ltw",
+    "atletico_madrid.png": "https://drive.google.com/drive/u/7/folders/174BoMTKqDYXXzZvLgIxvJhDylwO8_Tof",
+    "leverkusen.png": "https://drive.google.com/drive/u/7/folders/1kg7jkVg3eQYutSq1lQJiHitXlac9HLv3",
+    "dortmund.png": "https://drive.google.com/drive/u/7/folders/1NvTUfjU2Fytc2JWdzpD29iKC3DicjvD0",
+    "monchengladbach.png": "https://drive.google.com/drive/u/7/folders/1BcyriJv_8HLRfVi-WwsDa8MJds2lHRCi",
+    "chelsea.png": "https://drive.google.com/drive/u/7/folders/18o8m2wuBJswVkWAL9TjpzAAkJuSJ_Wlt",
+    "brugge.png": "https://drive.google.com/drive/u/7/folders/1kl7UiLqEdDX82ZaY_9FNhyamjFB0q6PY",
+    "crystal_palace.png": "https://drive.google.com/drive/u/7/folders/1axl7NXQ37sOe7ptFI_sWYTHPSs3m8DFh",
+    "everton.png": "https://drive.google.com/drive/u/7/folders/1e5ul46khoOpUEJOX0YeLtjmI9pTV9Bv8",
+    "barcelona.png": "https://drive.google.com/drive/u/7/folders/1msO86w_sAA7xOmtpJj32fnSggV1zjlwP",
+    "bayern.png": "https://drive.google.com/drive/u/7/folders/1_qic_GgS5a3TpzTJBsgs_-U9FHGugRY_",
+    "schalke.png": "https://drive.google.com/drive/u/7/folders/1Ls2vL5uwEmZpFYwiY6KvlBwjSKN9B_HU",
+    "mainz.png": "https://drive.google.com/drive/u/7/folders/1RS4ZML8ByCqCv2LMvLzYvH8rxBD0gq01",
+    "hibernian.png": "https://drive.google.com/drive/u/7/folders/1dFzt1_AnOdV2mzo0f3XkB_2RYy8k5QYa",
+    "inter.png": "https://drive.google.com/drive/u/7/folders/1klpLsuyHqOlDbSZDska7fUWfcpmbFj0n",
+    "liverpool.png": "https://drive.google.com/drive/u/7/folders/1_v5yxYzC7NKSX5Kde1nTjsVGhWvjFZyH",
+    "mallorca.png": "https://drive.google.com/drive/u/7/folders/1sw7TCeHh-2KjacBYgsQzEUXYpeahczCA",
+    "city.png": "https://drive.google.com/drive/u/7/folders/1yMbqSt8Moub0gr8Cw3rELCjc59cPRGId",
+    "napoli.png": "https://drive.google.com/drive/u/7/folders/1zoCh_lbCRTZWIhmR1DQPTpz-BZaTgutU",
+    "psg.png": "https://drive.google.com/drive/u/7/folders/1Is3jysjYXF--LfTRcV4gn2j6e3RTzylq",
+    "leipzig.png": "https://drive.google.com/drive/u/7/folders/1kaH_Netawgy2KclrizCmIDQIEDrx3LEY",
+    "stuttgart.png": "https://drive.google.com/drive/u/7/folders/1WEYZtGtLGmi3UHDeiufG8wDLml-Q3FCM",
+    "villarreal.png": "https://drive.google.com/drive/u/7/folders/1khtfZI7K9VAMeykZjDvWQ2ETTXAm3Pzy",
+    "wolfsburg.png": "https://drive.google.com/drive/u/7/folders/12f_VpGYFG3UCw7FVQIFVV1U0BVttiT8F",
 }
 
 
@@ -286,9 +286,9 @@ logos_html = "".join(
 )
 
 col2_buttons_html = """
-<a class="folder-btn" role="button" href="https://drive.google.com/drive/u/1/folders/1rA8IBOzfegLLJRtl_9GgFh0tSjzxCOB3" target="_blank">✅ Checklist</a>
+<a class="folder-btn" role="button" href="https://drive.google.com/drive/u/7/folders/1tK_ew-TaFyBSUY5oDwSr3FIbFbYgG93I" target="_blank">✅ Checklist</a>
 <div style="height: 28px;"></div>
-<a class="folder-btn" role="button" href="https://drive.google.com/drive/u/1/folders/1k3GpCbc5nQWIMz9qw0zellwHgYmO912G" target="_blank">👤 Modelos de Trabalhos Autorais</a>
+<a class="folder-btn" role="button" href="https://drive.google.com/drive/u/7/folders/1aMjM3fQs7S_yqK0Yp_UG26C52yidxzLR" target="_blank">👤 Modelos de Trabalhos Autorais</a>
 """
 
 st.markdown(
