@@ -29,9 +29,42 @@ def get_logo_html(filename: str, link: str = "#", class_name: str = "logo-img") 
     )
 
 
+youtube_icon = """
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modal-icon">
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+"""
+
+drive_icon = """
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modal-icon">
+    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+    <polyline points="2 17 12 22 22 17"></polyline>
+    <polyline points="2 12 12 17 22 12"></polyline>
+</svg>
+"""
+
+modal_configs = {
+    "modelos_trabalho_autorais": {
+        "title": "Modelos de Trabalhos Autorais",
+        "dialog_title": "Modelos de Trabalhos Autorais",
+        "options": [
+            {"icon": drive_icon, "label": "Modelos de trabalho autorais", "link": "https://drive.google.com/drive/u/7/folders/1aMjM3fQs7S_yqK0Yp_UG26C52yidxzLR"},
+            {"icon": youtube_icon, "label": "Compacto 10/02/2026", "link": "https://youtu.be/c0v-SQuM2J0"},
+            {"icon": youtube_icon, "label": "Compacto 09/02/2026", "link": "https://youtu.be/dHoMzZS5CgE"},
+        ],
+    },
+}
+
+if "modal_open" not in st.session_state:
+    st.session_state.modal_open = None
+
 try:
     query_params = st.query_params
-    if "go" in query_params:
+    if "modal" in query_params:
+        st.session_state.modal_open = query_params["modal"]
+        query_params.clear()
+    elif "go" in query_params:
         dest = query_params["go"]
         query_params.clear()
         try:
@@ -49,7 +82,27 @@ try:
 except AttributeError:
     pass
 
+
+def render_modal(config):
+    header_html = f'<div class="modal-header-row"><div class="modal-title-text">{config["title"]}</div></div>'
+    options_html = ""
+    for opt in config["options"]:
+        options_html += f'<a class="modal-btn" role="button" href="{opt["link"]}" target="_blank">{opt["icon"]}<span class="modal-btn-text">{opt["label"]}</span></a>'
+    full_html = f'<div class="custom-modal-content">{header_html}<div class="modal-subtitle">Selecione uma das opções abaixo:</div><div class="modal-options-container">{options_html}</div></div>'
+    st.markdown(full_html, unsafe_allow_html=True)
+
 st.markdown('<a href="?go=centro" target="_self" class="back-button" title="Voltar ao Centro de Informações"> &#x21A9; </a>', unsafe_allow_html=True)
+
+modal_to_show = st.session_state.get("modal_open")
+if modal_to_show and modal_to_show in modal_configs:
+    st.session_state.modal_open = None
+    config = modal_configs[modal_to_show]
+
+    @st.dialog(config["dialog_title"])
+    def show_modal():
+        render_modal(config)
+
+    show_modal()
 
 YELLOW = "#FFA500"
 
@@ -255,6 +308,52 @@ st.markdown(
         opacity: 1 !important;
       }}
 
+      /* ===== Modal (st.dialog) ===== */
+      [data-testid="stDialog"] > div {{
+        padding: 28px 32px !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.18) !important;
+      }}
+      [data-testid="stDialog"] button[aria-label="Close"],
+      [data-testid="stDialog"] button[title="Close"] {{
+        width: 36px !important; height: 36px !important;
+        border-radius: 8px !important; background: white !important;
+        border: 2px solid #FABB48 !important; color: #202020 !important;
+      }}
+      .custom-modal-content {{ padding: 8px 2px; }}
+      .modal-options-container {{
+        max-height: 400px; overflow-y: auto; overflow-x: hidden;
+        padding: 10px 25px 10px 10px; margin-right: -25px;
+      }}
+      .modal-header-row {{
+        display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+      }}
+      .modal-title-text {{
+        font-family: 'Anton', sans-serif !important;
+        font-size: 20px; text-transform: uppercase; letter-spacing: 0.02em;
+      }}
+      .modal-subtitle {{
+        font-size: 16px; color: #555; margin: 8px 0 16px 0;
+      }}
+      a.modal-btn {{
+        background-color: white; color: #202020 !important;
+        padding: 8px 16px; border-radius: 12px; text-align: left;
+        font-size: 16px; font-family: 'Anton', sans-serif !important;
+        box-shadow: 4px 4px 0px 0px #FABB48; border: 2px solid #FABB48;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        cursor: pointer; display: flex; flex-direction: row;
+        align-items: center; justify-content: flex-start;
+        width: 100%; height: 56px; text-decoration: none !important;
+        margin-bottom: 12px; gap: 12px;
+      }}
+      a.modal-btn .modal-btn-text {{ flex-grow: 1; }}
+      a.modal-btn:hover {{
+        transform: scale(1.03); box-shadow: 6px 6px 0px 0px #FABB48;
+        color: #202020 !important; border: 2px solid #FABB48;
+        background-color: white !important; filter: none !important; opacity: 1 !important;
+      }}
+
       /* Mobile */
       @media (max-width: 768px) {{
         :root {{
@@ -273,6 +372,11 @@ st.markdown(
         .barroca-col:last-child {{ border-bottom: none; }}
         .logos-grid-externos {{ grid-template-columns: repeat(3, minmax(0, 1fr)); }}
         a.folder-btn {{ height: 64px; font-size: 16px; border-radius: 14px; }}
+        [data-testid="stDialog"] > div {{ padding: 20px !important; width: min(92vw, 520px) !important; max-width: 92vw !important; }}
+        .modal-title-text {{ font-size: 18px; }}
+        .modal-subtitle {{ font-size: 14px; }}
+        a.modal-btn {{ height: 48px; font-size: 14px; gap: 10px; padding: 8px 12px; box-shadow: 3px 3px 0px 0px #FABB48; }}
+        .modal-options-container {{ max-height: 52vh; padding-right: 18px; margin-right: -18px; }}
       }}
     </style>
     """,
@@ -288,7 +392,7 @@ logos_html = "".join(
 col2_buttons_html = """
 <a class="folder-btn" role="button" href="https://drive.google.com/drive/u/7/folders/1tK_ew-TaFyBSUY5oDwSr3FIbFbYgG93I" target="_blank">✅ Checklist</a>
 <div style="height: 28px;"></div>
-<a class="folder-btn" role="button" href="https://drive.google.com/drive/u/7/folders/1aMjM3fQs7S_yqK0Yp_UG26C52yidxzLR" target="_blank">👤 Modelos de Trabalhos Autorais</a>
+<a class="folder-btn" role="button" href="?modal=modelos_trabalho_autorais" target="_self">👤 Modelos de Trabalhos Autorais</a>
 """
 
 st.markdown(

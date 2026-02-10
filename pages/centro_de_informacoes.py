@@ -113,6 +113,7 @@ modal_configs = {
             {
                 "title": "Compactos / Materiais de TV 2026",
                 "options": [
+                    {"icon": youtube_icon, "label": "Compactos 02/26", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqvdlGOvx_zbiqUZshwmV1W"},
                     {"icon": youtube_icon, "label": "Compactos 01/26", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhpNGWIOJ1LZs6ptqHPkTq5Q"},
                 ]
             },
