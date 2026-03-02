@@ -104,8 +104,15 @@ modal_configs = {
         "dialog_title": "Treinos / Jogos e Compactos",
         "sections": [
             {
+                "title": "Aquecimento de Jogo",
+                "options": [
+                    {"icon": youtube_icon, "label": "Aquecimento AL Final", "link": "https://youtu.be/eZbLQxl1KHw"},
+                ]
+            },
+            {
                 "title": "Treinos 2026",
                 "options": [
+                    {"icon": youtube_icon, "label": "Treinos 03/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqxRVWnhyxTpb8AUbHUpl2i"},
                     {"icon": youtube_icon, "label": "Treinos 02/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMho1GmRpwLEUsBMCG0CQPQw7"},
                     {"icon": youtube_icon, "label": "Treinos 01/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhoHtVNkLQE1P2FIWabcuqdp"},
                 ]
@@ -149,6 +156,8 @@ modal_configs = {
         "logo": "avai.png",
         "dialog_title": "Treinos / Jogos e Compactos",
         "options": [
+            {"icon": youtube_icon, "label": "Aquecimento de Jogo (Compilado)", "link": "https://drive.google.com/file/d/1yyroEU8mVIEbbAiizQXfEPdPLJ7AZRcN/view?usp=drive_link"},
+            {"icon": youtube_icon, "label": "Aquecimento vs. Cuiabá (03/07/22)", "link": "https://www.youtube.com/watch?v=nVnznnz4DII"},
             {"icon": drive_icon, "label": "Treinamentos", "link": "https://drive.google.com/drive/u/7/folders/1eTpbV02bgdLCWzFFH1eXZV1kJvkgN-g-"},
             {"icon": youtube_icon, "label": "Jogos Série B - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW9NQ0M06fy30nW_v4muAfYV"},
             {"icon": youtube_icon, "label": "Jogos Catarinense - 2024", "link": "https://www.youtube.com/playlist?list=PLO-okjzqdIW-rvLi0FR8ukfBpx21xxCNM"},
