@@ -112,6 +112,7 @@ modal_configs = {
             {
                 "title": "Treinos 2026",
                 "options": [
+                    {"icon": youtube_icon, "label": "Treinos 04/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhrm9hZGqewiRTcyAG7yATKW"},
                     {"icon": youtube_icon, "label": "Treinos 03/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhqxRVWnhyxTpb8AUbHUpl2i"},
                     {"icon": youtube_icon, "label": "Treinos 02/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMho1GmRpwLEUsBMCG0CQPQw7"},
                     {"icon": youtube_icon, "label": "Treinos 01/2026", "link": "https://www.youtube.com/playlist?list=PLvHh7B7NkMhoHtVNkLQE1P2FIWabcuqdp"},
