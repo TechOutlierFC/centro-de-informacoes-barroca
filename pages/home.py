@@ -121,4 +121,4 @@ with col_central:
         st.markdown("<div class='custom-box'>Logo não encontrada</div>", unsafe_allow_html=True)
 
 
-st.markdown("<div class='fixed-update'><em>Última atualização 13/04/2026</em></div>", unsafe_allow_html=True)
+st.markdown("<div class='fixed-update'><em>Última atualização 16/04/2026</em></div>", unsafe_allow_html=True)
