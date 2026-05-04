@@ -1,3 +1,5 @@
 pandas
 streamlit>=1.26.0
 streamlit-authenticator
+altair>=5.0.0
+plotly>=5.18.0

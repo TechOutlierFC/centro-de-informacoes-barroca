@@ -44,13 +44,12 @@ YELLOW = "#FFA500"
 
 folder_icons = {
     "Números na Carreira": "📊",
-    "Em Breve": "⏳"
+    "Agregação de Valor": "📈",
 }
 
-folders = ["Números na Carreira", "Em Breve"]
-
 folder_links = {
-    "Números na Carreira": "/numeros_carreira"
+    "Números na Carreira": "/numeros_carreira",
+    "Agregação de Valor": "/agregacao_valor",
 }
 
 st.markdown(
@@ -399,13 +398,12 @@ with content_col:
             unsafe_allow_html=True,
         )
     
-    # Botão "Em Breve"
+    # Agregação de Valor
     with cols[2]:
-        icon = folder_icons.get("Em Breve", "⏳")
-        st.button(
-            label=f'{icon} Em Breve',
-            key="folder_em_breve",
-            width='stretch'
+        icon = folder_icons.get("Agregação de Valor", "📈")
+        st.markdown(
+            f'<a class="folder-btn" role="button" href="{folder_links["Agregação de Valor"]}" target="_self">{icon} Agregação de Valor</a>',
+            unsafe_allow_html=True,
         )
     
     st.markdown('</div>', unsafe_allow_html=True)
